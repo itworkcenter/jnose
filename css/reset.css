@@ -1,0 +1,64 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, i, q, s, samp,
+small, strike, strong, tt, var,
+dl, dt, dd, ul, ol, li,
+form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: normal;
+	font-family: inherit;
+	text-decoration: none;
+	-webkit-text-size-adjust: none;
+	-ms-interpolation-mode: bicubic;
+}
+strong { font-weight: bold; }
+html { font-size: 62.5%; }
+body { font-size: 1em; }
+html, body { height: 100%; }
+:focus { outline: 0; }
+ul, ol { list-style: none; }
+textarea { resize: none; }
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+}
+caption, th, td {
+	font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.fix { *clear: left; }
+.fix:after {
+	clear: both;
+	display: table;
+	content: " ";
+	visibility: hidden;
+	height: 0;
+	overflow: hidden;
+	font-size: 0;
+}
