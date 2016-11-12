@@ -1,0 +1,92 @@
+/*:start layout*/
+.ns-row:after, .ns-row:before {
+    content: " ";
+    display: table;
+    clear: both;
+}
+.ns-row-gap{
+  margin-left: -5px;
+  margin-right:-5px;
+}
+.ns-row-gap [class*="ns-col"] {
+  padding:0 5px;
+  margin-bottom:5px;
+}
+.ns-row-gap.gap-x{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.ns-row-gap.gap-x [class *= "ns-col"]{
+    padding: 0 10px;
+}
+
+[class*="ns-col"]{
+    float: left;
+    box-sizing: border-box;
+}
+.ns-col-12 {
+    width: 100%;
+}
+.ns-col-11 {
+    width: 91.6666%;
+}
+.ns-col-10 {
+    width: 83.3333%;
+}
+.ns-col-9 {
+    width: 75%;
+}
+.ns-col-8 {
+    width: 66.6667%;
+}
+.ns-col-7 {
+    width: 58.3333%;
+}
+.ns-col-6 {
+    width: 50%;
+}
+.ns-col-5 {
+    width: 41.6666%;
+}
+.ns-col-4 {
+    width: 33.3333%;
+}
+.ns-col-3 {
+    width: 25%;
+}
+.ns-col-2 {
+    width: 16.6667%;
+}
+.ns-col-1 {
+    width: 8.3333%;
+}
+
+/*page structure*/
+.page-container {}
+.page-section {}
+.page-section >.inner{
+    margin: 0 auto;
+    min-width: 1100px;
+    max-width: 1650px;
+}
+/*:start title*/
+.ns-title-xxx {
+    margin: 10px 0 20px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+.ns-title-xx{
+    margin: 10px 0 20px 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+.ns-title-x {
+    margin: 5px 0 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+.ns-title{
+    margin: 3px 0 6px 0;
+    font-size: 12px;
+    font-weight: 400;
+}
