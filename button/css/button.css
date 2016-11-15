@@ -1,5 +1,5 @@
 /*button*/
-.ns-btn {
+.nbtn{
     display: inline-block;
     padding: 6px 1em;
     margin: 0;
@@ -22,93 +22,93 @@
     border-radius: 3px;
     box-sizing: border-box;
 }
-.ns-btn.ns-btn-xxx {
+.nbtn.nbtn-xxx {
     padding: 10px 16px;
     font-size: 18px;
     line-height: 1.3333333;
 }
-.ns-btn.ns-btn-xx {
+.nbtn.nbtn-xx {
     padding: 5px 10px;
     font-size: 12px;
     line-height: 1.5;
 }
-.ns-btn.ns-btn-x {
+.nbtn.nbtn-x {
     padding: 1px 5px;
     font-size: 12px;
     line-height: 1.5;
 }
-.ns-btn.ns-btn-default- {
+.nbtn.nbtn-default- {
     color: #999;
     background: #eee;
 }
-.ns-btn.ns-btn--primary {
+.nbtn.nbtn--primary {
     color: #fff;
     background: #348fe2;
     border-color: #348fe2;
 }
-.ns-btn--primary.active, .ns-btn--primary:active, .ns-btn--primary:focus, .ns-btn--primary:hover {
+.nbtn--primary.active, .nbtn--primary:active, .nbtn--primary:focus, .nbtn--primary:hover {
     background: #2a72b5;
     border-color: #2a72b5;
 }
-.ns-btn.ns-btn--info {
+.nbtn.nbtn--info {
     color: #fff;
     background: #49b6d6;
     border-color: #49b6d6;
 }
-.ns-btn--info.active, .ns-btn--info:active, .ns-btn--info:focus, .ns-btn--info:hover {
+.nbtn--info.active, .nbtn--info:active, .nbtn--info:focus, .nbtn--info:hover {
     background: #3a92ab;
     border-color: #3a92ab;
 }
-.ns-btn.ns-btn--success {
+.nbtn.nbtn--success {
     color: #fff;
     background: #64bd63;
     border-color: #64bd63;
 }
-.ns-btn.ns-btn--success.active, .ns-btn.ns-btn--success:active, .ns-btn.ns-btn--success:focus, .ns-btn.ns-btn--success:hover {
+.nbtn.nbtn--success.active, .nbtn.nbtn--success:active, .nbtn.nbtn--success:focus, .nbtn.nbtn--success:hover {
     background: #48a746;
     border-color: #48a746;
 }
-.ns-btn.ns-btn-danger- {
+.nbtn.nbtn--danger {
     color: #fff;
     background: #ff5b57;
     border-color: #ff5b57;
 }
-.ns-btn-danger-.active, .ns-btn-danger-:active, .ns-btn-danger-:focus, .ns-btn-danger-:hover {
+.nbtn--danger.active, .nbtn--danger:active, .nbtn--danger:focus, .nbtn--danger:hover {
     background: #cc4946;
     border-color: #cc4946;
 }
-.ns-btn.ns-btn--warning{
+.nbtn.nbtn--warning{
     color: #fff;
     background: #f59c1a;
     border-color: #f59c1a;
 }
-.ns-btn--warning.active, .ns-btn--warning:active, .ns-btn--warning:focus, .ns-btn--warning:hover {
+.nbtn--warning.active, .nbtn--warning:active, .nbtn--warning:focus, .nbtn--warning:hover {
     background: #c47d15;
     border-color: #c47d15;
 }
-.ns-btn:disabled, .ns-btn:disabled.active, .ns-btn:disabled:active, .ns-btn:disabled:focus, .ns-btn:disabled:hover {
+.nbtn:disabled, .nbtn:disabled.active, .nbtn:disabled:active, .nbtn:disabled:focus, .nbtn:disabled:hover {
     color: #ccc;
     background: #eee;
     border-color: #ddd;
     cursor: not-allowed;
 }
-.ns-btn.ns-btn--link{
+.nbtn.nbtn--link{
     font-weight: 400;
     color: #337ab7;
     border: 0;
     border-radius: 0;
 }
-.ns-btn.ns-btn--link:focus, .ns-btn.ns-btn--link:hover {
+.nbtn.nbtn--link:focus, .nbtn.nbtn--link:hover {
     color: #23527c;
     text-decoration: underline;
     background-color: transparent;
 }
-.ns-btn.ns-btn--danger {
+.nbtn.nbtn--danger {
     color: #fff;
     background: #ff5b57;
     border-color: #ff5b57;
 }
-.ns-btn.ns-btn--circle{
+.nbtn.nbtn--circle{
     padding: 0;
     width: 28px;
     height: 28px;
@@ -120,19 +120,19 @@
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
-.ns-btn-x.ns-btn--circle{
+.nbtn-x.nbtn--circle{
     width: 16px;
     height: 16px;
     line-height: 16px;
     font-size: 8px;
 }
-.ns-btn-xx.ns-btn--circle{
+.nbtn-xx.nbtn--circle{
     width: 22px;
     height: 22px;
     line-height: 22px;
     font-size: 11px;
 }
-.ns-btn-xxx.ns-btn--circle{
+.nbtn-xxx.nbtn--circle{
     width: 34px;
     height: 34px;
     line-height: 34px;
