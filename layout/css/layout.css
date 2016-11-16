@@ -1,63 +1,63 @@
 /*:start layout*/
-.ns-row:after, .ns-row:before {
+.nrow:after, .nrow:before {
     content: " ";
     display: table;
     clear: both;
 }
-.ns-row-gap{
+.nrow-gap{
   margin-left: -5px;
   margin-right:-5px;
 }
-.ns-row-gap [class*="ns-col"] {
+.nrow-gap [class*="ncol"] {
   padding:0 5px;
   margin-bottom:5px;
 }
-.ns-row-gap.gap-x{
+.nrow-gap.gap-x{
     margin-left: -10px;
     margin-right: -10px;
 }
-.ns-row-gap.gap-x [class *= "ns-col"]{
+.nrow-gap.gap-x [class *= "ncol"]{
     padding: 0 10px;
 }
 
-[class*="ns-col"]{
+[class*="ncol"]{
     float: left;
     box-sizing: border-box;
 }
-.ns-col-12 {
+.ncol-12 {
     width: 100%;
 }
-.ns-col-11 {
+.ncol-11 {
     width: 91.6666%;
 }
-.ns-col-10 {
+.ncol-10 {
     width: 83.3333%;
 }
-.ns-col-9 {
+.ncol-9 {
     width: 75%;
 }
-.ns-col-8 {
+.ncol-8 {
     width: 66.6667%;
 }
-.ns-col-7 {
+.ncol-7 {
     width: 58.3333%;
 }
-.ns-col-6 {
+.ncol-6 {
     width: 50%;
 }
-.ns-col-5 {
+.ncol-5 {
     width: 41.6666%;
 }
-.ns-col-4 {
+.ncol-4 {
     width: 33.3333%;
 }
-.ns-col-3 {
+.ncol-3 {
     width: 25%;
 }
-.ns-col-2 {
+.ncol-2 {
     width: 16.6667%;
 }
-.ns-col-1 {
+.ncol-1 {
     width: 8.3333%;
 }
 
@@ -70,22 +70,22 @@
     max-width: 1650px;
 }
 /*:start title*/
-.ns-title-xxx {
+.ntitle-xxx {
     margin: 10px 0 20px 0;
     font-size: 24px;
     font-weight: 400;
 }
-.ns-title-xx{
+.ntitle-xx{
     margin: 10px 0 20px 0;
     font-size: 18px;
     font-weight: 400;
 }
-.ns-title-x {
+.ntitle-x {
     margin: 5px 0 10px 0;
     font-size: 14px;
     font-weight: 400;
 }
-.ns-title{
+.ntitle{
     margin: 3px 0 6px 0;
     font-size: 12px;
     font-weight: 400;
