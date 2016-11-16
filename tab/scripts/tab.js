@@ -1,155 +1,116 @@
-/* ========================================================================
- * Bootstrap: tab.js v3.3.7
- * http://getbootstrap.com/javascript/#tabs
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
+/* *******************************
+ * tab.js v1.0.0
+ * Creator: Carl Liu
+ * Date: 2016.11.14
+ * Description: Tab plugin .
+ * ******************************* */
 
+/* *******************************
+   Update Note:
+    1.
+    2.
+ * ******************************* */
 
-+function ($) {
-  'use strict';
+/*
+*Tab Useage:*
 
-  // TAB CLASS DEFINITION
-  // ====================
+ */
+;
+! function(window, $, document, undefined) {
 
-  var Tab = function (element) {
-    // jscs:disable requireDollarBeforejQueryAssignment
-    this.element = $(element)
-    // jscs:enable requireDollarBeforejQueryAssignment
-  }
-
-  Tab.VERSION = '3.3.7'
-
-  Tab.TRANSITION_DURATION = 150
-
-  Tab.prototype.show = function () {
-    var $this    = this.element
-    var $ul      = $this.closest('ul:not(.dropdown-menu)')
-    var selector = $this.data('target')
-
-    if (!selector) {
-      selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+    var Tab = function(element, options) {
+        this.init("tab", element, options);
     }
 
-    if ($this.parent('li').hasClass('active')) return
+    // Default options define
+    Tab.VERSION = "1.1.0";
+    Tab.SELECTORS = {
+        tabSelector: ".ntab",
+        tabBoxSelector: ".ntab-box",
+        tabPaneSelector: ".ntab-pane",
+        activeSelectorStr: "active"
+    };
 
-    var $previous = $ul.find('.active:last a')
-    var hideEvent = $.Event('hide.bs.tab', {
-      relatedTarget: $this[0]
-    })
-    var showEvent = $.Event('show.bs.tab', {
-      relatedTarget: $previous[0]
-    })
+    Tab.DEFAULTS = {
+        type: "tab",
+        domain: "ng.tab"
+    };
 
-    $previous.trigger(hideEvent)
-    $this.trigger(showEvent)
+    // Alias
+    Tab.fn = Tab.prototype;
 
-    if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) return
-
-    var $target = $(selector)
-
-    this.activate($this.closest('li'), $ul)
-    this.activate($target, $target.parent(), function () {
-      $previous.trigger({
-        type: 'hidden.bs.tab',
-        relatedTarget: $this[0]
-      })
-      $this.trigger({
-        type: 'shown.bs.tab',
-        relatedTarget: $previous[0]
-      })
-    })
-  }
-
-  Tab.prototype.activate = function (element, container, callback) {
-    var $active    = container.find('> .active')
-    var transition = callback
-      && $.support.transition
-      && ($active.length && $active.hasClass('fade') || !!container.find('> .fade').length)
-
-    function next() {
-      $active
-        .removeClass('active')
-        .find('> .dropdown-menu > .active')
-          .removeClass('active')
-        .end()
-        .find('[data-toggle="tab"]')
-          .attr('aria-expanded', false)
-
-      element
-        .addClass('active')
-        .find('[data-toggle="tab"]')
-          .attr('aria-expanded', true)
-
-      if (transition) {
-        element[0].offsetWidth // reflow for transition
-        element.addClass('in')
-      } else {
-        element.removeClass('fade')
-      }
-
-      if (element.parent('.dropdown-menu').length) {
-        element
-          .closest('li.dropdown')
-            .addClass('active')
-          .end()
-          .find('[data-toggle="tab"]')
-            .attr('aria-expanded', true)
-      }
-
-      callback && callback()
+    //Initialization
+    Tab.fn.init = function(type, element, options) {
+        this.$el = $(element);
+        this.$box = this.$el.parents(Tab.SELECTORS.tabBoxSelector);
+        //Option priority: data - options > incoming - options > default -options
+        this.options = $.extend({}, Tab.DEFAULTS, Tab.SELECTORS, options, this.$box.data());
+        this.type = type || this.options.type;
+    };
+    // upadte element
+    Tab.fn.update = function (element) {
+        this.$el = $(element);
     }
 
-    $active.length && transition ?
-      $active
-        .one('bsTransitionEnd', next)
-        .emulateTransitionEnd(Tab.TRANSITION_DURATION) :
-      next()
+    // Event
+    Tab.fn.show = function() {
+        var activeStr = this.options.activeSelectorStr;
+        var $target = this.getTarget();
+        var tabIndex = this.$el.index();
 
-    $active.removeClass('in')
-  }
+        if (this.$el.hasClass(activeStr)) return;
 
+        this.$el
+        .addClass(activeStr)
+        .siblings(this.options.tabSelector)
+        .removeClass(activeStr);
 
-  // TAB PLUGIN DEFINITION
-  // =====================
+        $(this.options.tabPaneSelector+":eq("+tabIndex+")", $target)
+        .addClass(activeStr)
+        .siblings(this.options.tabPaneSelector)
+        .removeClass(activeStr);
 
-  function Plugin(option) {
-    return this.each(function () {
-      var $this = $(this)
-      var data  = $this.data('bs.tab')
+        this.$el.trigger('show.n.tab', this.$el);
+    };
 
-      if (!data) $this.data('bs.tab', (data = new Tab(this)))
-      if (typeof option == 'string') data[option]()
-    })
-  }
+    // Get Target
+    Tab.fn.getTarget = function() {
+        return $(this.options.target);
+    }
 
-  var old = $.fn.tab
+    // Plugin Definition
+    function Plugin(option) {
+        return this.each(function() {
+            var $this = $(this);
+            var $box = $this.parents(Tab.SELECTORS.tabBoxSelector);
+            var api = $box.data("n.tab");
+            var options = typeof option == "object" ? option : {};
 
-  $.fn.tab             = Plugin
-  $.fn.tab.Constructor = Tab
+            api ? api.update(this) : $box.data('n.tab',(api = new Tab(this, options)));
 
+            if (typeof option == 'string') api[option]();
+        })
+    }
 
-  // TAB NO CONFLICT
-  // ===============
+    var old = $.fn.tab;
 
-  $.fn.tab.noConflict = function () {
-    $.fn.tab = old
-    return this
-  }
+    $.fn.tab = Plugin;
+    $.fn.tab.Constructor = Tab;
 
+    // POPOVER NO CONFLICT
+    // ===================
+    $.fn.tab.noConflict = function() {
+        $.fn.tab = old
+        return this
+    }
 
-  // TAB DATA-API
-  // ============
+    // DATA-API
+    var clickHandler = function (e) {
+      e.preventDefault()
+      Plugin.call($(this), 'show')
+    }
 
-  var clickHandler = function (e) {
-    e.preventDefault()
-    Plugin.call($(this), 'show')
-  }
+    $(document)
+        .on("click.n.tab", Tab.SELECTORS.tabSelector, clickHandler);
 
-  $(document)
-    .on('click.bs.tab.data-api', '[data-toggle="tab"]', clickHandler)
-    .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
-
-}(jQuery);
+}(window, jQuery, document);
