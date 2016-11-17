@@ -1,0 +1,140 @@
+/*button*/
+.nbtn{
+    display: inline-block;
+    padding: 6px 1em;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.nbtn.nbtn-xxx {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+}
+.nbtn.nbtn-xx {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.nbtn.nbtn-x {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.nbtn.nbtn-default- {
+    color: #999;
+    background: #eee;
+}
+.nbtn.nbtn--primary {
+    color: #fff;
+    background: #348fe2;
+    border-color: #348fe2;
+}
+.nbtn--primary.active, .nbtn--primary:active, .nbtn--primary:focus, .nbtn--primary:hover {
+    background: #2a72b5;
+    border-color: #2a72b5;
+}
+.nbtn.nbtn--info {
+    color: #fff;
+    background: #49b6d6;
+    border-color: #49b6d6;
+}
+.nbtn--info.active, .nbtn--info:active, .nbtn--info:focus, .nbtn--info:hover {
+    background: #3a92ab;
+    border-color: #3a92ab;
+}
+.nbtn.nbtn--success {
+    color: #fff;
+    background: #64bd63;
+    border-color: #64bd63;
+}
+.nbtn.nbtn--success.active, .nbtn.nbtn--success:active, .nbtn.nbtn--success:focus, .nbtn.nbtn--success:hover {
+    background: #48a746;
+    border-color: #48a746;
+}
+.nbtn.nbtn--danger {
+    color: #fff;
+    background: #ff5b57;
+    border-color: #ff5b57;
+}
+.nbtn--danger.active, .nbtn--danger:active, .nbtn--danger:focus, .nbtn--danger:hover {
+    background: #cc4946;
+    border-color: #cc4946;
+}
+.nbtn.nbtn--warning{
+    color: #fff;
+    background: #f59c1a;
+    border-color: #f59c1a;
+}
+.nbtn--warning.active, .nbtn--warning:active, .nbtn--warning:focus, .nbtn--warning:hover {
+    background: #c47d15;
+    border-color: #c47d15;
+}
+.nbtn:disabled, .nbtn:disabled.active, .nbtn:disabled:active, .nbtn:disabled:focus, .nbtn:disabled:hover {
+    color: #ccc;
+    background: #eee;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+.nbtn.nbtn--link{
+    font-weight: 400;
+    color: #337ab7;
+    border: 0;
+    border-radius: 0;
+}
+.nbtn.nbtn--link:focus, .nbtn.nbtn--link:hover {
+    color: #23527c;
+    text-decoration: underline;
+    background-color: transparent;
+}
+.nbtn.nbtn--danger {
+    color: #fff;
+    background: #ff5b57;
+    border-color: #ff5b57;
+}
+.nbtn.nbtn--circle{
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.nbtn-x.nbtn--circle{
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 8px;
+}
+.nbtn-xx.nbtn--circle{
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 11px;
+}
+.nbtn-xxx.nbtn--circle{
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 17px;
+}
