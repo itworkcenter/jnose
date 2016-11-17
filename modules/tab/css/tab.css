@@ -1,0 +1,36 @@
+.ntab-box > .ntab,
+.ntab-box > ul > .ntab{
+    position: relative;
+    float: left;
+    display: block;
+    margin-right: 2px;
+    padding: 10px 15px;
+    list-style: none;
+    line-height: 1.42857143;
+    cursor: default;
+    border-radius: 4px 4px 0 0;
+}
+.ntab-box > .ntab.active,
+.ntab-box > ul > .ntab.active{
+    margin-bottom: -1px;
+    color: #555;
+
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.ntab-box:before,
+.ntab-box:after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+.ntab-box.box--nav{
+    border-bottom: 1px solid #ddd;
+}
+.ntab-box > .ntab-pane{
+    display: none;
+}
+.ntab-box > .ntab-pane.active{
+    display: block;
+}
