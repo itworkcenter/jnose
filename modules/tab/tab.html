@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tab</title>
+        <link rel="stylesheet" type="text/css" href="../../dist/css/base.all.css">
+        <link rel="stylesheet" type="text/css" href="../../dist/css/module.all.css">
+        <link rel="stylesheet" type="text/css" href="css/tab.css">
+
+        <script type="text/javascript" src="../../dist/scripts/base.all.js"></script>
+        <script type="text/javascript" src="../../dist/scripts/module.all.js"></script>
+        <script type="text/javascript" src="scripts/tab.js" ></script>
+    </head>
+    <body>
+        <div class="npanel npanel--x-info">
+            <div class="npanel-body">
+
+                <div class="nrow">
+                    <div class="ncol-12">
+                        <div class="ns-title-xx">Default</div>
+                        <!--:start ntab navigation structure -->
+                        <ul id="tab" class="ntab-box box--nav" data-target="#navbody">
+                            <li class="ntab"><a href="javascript:;">tab 01</a></li>
+                            <li class="ntab active"><a href="javascript:;">tab 02</a></li>
+                            <li class="ntab"><a href="javascript:;">tab 03</a></li>
+                        </ul>
+                        <div id="navbody" class="ntab-box">
+                            <div class="ntab-pane"><a href="">content 01</a></div>
+                            <div class="ntab-pane active"><a href="">content 02</a></div>
+                            <div class="ntab-pane"><a href="">content 03</a></div>
+                        </div>
+                    </div>
+                    <!--:end ntab navigation structure -->
+                </div>
+                <!-- end: row -->
+
+
+            </div>
+        </div>
+
+    </body>
+</html>
+<script type="text/javascript">
+    $("#tab").on("show.n.tab",function(e){
+        console.log(e);
+    })
+</script>
