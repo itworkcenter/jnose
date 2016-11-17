@@ -1,0 +1,114 @@
+.nmodal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    z-index: 1100;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+.nmodal:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    margin-left: -1em;
+    vertical-align: middle;
+}
+.nmodal.open{
+    display: block;
+}
+.nmodal-box {
+    position: relative;
+    display: inline-block;
+    margin: 10px auto;
+    max-width: 600px;
+    min-width: 90%;
+    vertical-align: middle;
+    text-align: left;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+
+.nmodal.fade .nmodal-dialog {
+    -webkit-transition: -webkit-transform .3s ease-out;
+    -o-transition: -o-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    -webkit-transform: translate(0,-25%);
+    -ms-transform: translate(0,-25%);
+    -o-transform: translate(0,-25%);
+    transform: translate(0,-25%);
+}
+.nmodal.fade.in .nmodal-dialog {
+    /* -webkit-transform: translate(0,0); */
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+}
+.nmodal-box-header {
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+.nmodal-box-header > .to-title {
+    margin: 0 100px 0 0;
+    font-size: 1.2em;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: #2b425b;
+    line-height: 1.42857143;
+}
+.nmodal-box-header > .to-tool {
+    float: right;
+}
+.nmodal-box-header > .to-tool > button{
+}
+.nmodal-box-body {
+    position: relative;
+    padding: 15px;
+}
+.nmodal-box-footer {
+    padding: 10px 5px;
+    text-align: right;
+    border-top: 1px solid #eee;
+}
+/*:start fade*/
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+.fade.in {
+    opacity: .5;
+}
+
+#overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #000;
+    opacity: .5;
+}
+
+/*:start responsive*/
+@media (min-width: 768px){
+    .nmodal-box {
+        width: 600px;
+        min-width: 0;
+    }
+}
