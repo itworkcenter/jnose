@@ -15,14 +15,34 @@
         <div class="nrow">
             <div class="ncol-6">
                 <button class="nbtn nbtn--primary" data-toggle ="modal" data-target="#Modal1">Default</button>
+                <button class="nbtn nbtn--second" data-toggle ="modal" data-target="#Modal2" data-remote="remote.html" >Remote</button>
             </div>
         </div>
 
-        <div id="Modal1" class="nmodal open" tabindex="-1" role="dialog">
+        <div id="Modal2" class="nmodal" tabindex="-1" role="dialog">
           <div class="nmodal-box">
                 <div class="nmodal-box-header">
                     <div class="to-tool">
-                        <button class="nbtn nbtn--circle" type="button" class="nmodal-close" >
+                        <button class="nbtn nbtn--circle nmodal-close" type="button">
+                            <i class="fa fa-times" ></i>
+                            <span class="close"></span>
+                        </button>
+                    </div>
+                    <h4 class="to-title">Modal Remote</h4>
+
+                </div>
+                <div class="nmodal-box-body"></div>
+                <div class="nmodal-box-footer">
+                  <button type="button" class="nbtn nbtn--default nmodal-close">Close</button>
+                </div>
+          </div>
+        </div>
+
+        <div id="Modal1" class="nmodal" tabindex="-1" role="dialog">
+          <div class="nmodal-box">
+                <div class="nmodal-box-header">
+                    <div class="to-tool">
+                        <button class="nbtn nbtn--circle nmodal-close" type="button">
                             <i class="fa fa-times" ></i>
                             <span class="close"></span>
                         </button>
@@ -51,7 +71,7 @@
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
                 </div>
                 <div class="nmodal-box-footer">
-                  <button type="button" class="nbtn nbtn--default">Close</button>
+                  <button type="button" class="nbtn nbtn--default nmodal-close">Close</button>
                   <button type="button" class="nbtn nbtn--primary">Save changes</button>
                 </div>
           </div>
