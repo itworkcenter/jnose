@@ -4,8 +4,9 @@
     background-color: #fff;
     border: 1px solid transparent;
     border-radius: 4px;
-    /*-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);*/
-    /*box-shadow: 0 1px 1px rgba(0, 0, 0, .05);*/
+    border: 1px solid #eee;
+     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 .npanel:before,
 .npanel:after,
@@ -16,8 +17,8 @@
     clear: both;
 }
 .npanel-head {
-    padding: 7px 15px;
-    border-bottom: 1px solid transparent;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     clear:both;
@@ -29,9 +30,11 @@
     clear: both;
 }
 .npanel-head-title{
-    float:left;
+    display: inline-block;
     font-size:14px;
-    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .npanel-head-tool{
     float:right;
