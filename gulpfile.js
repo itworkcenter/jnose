@@ -1,35 +1,47 @@
-var path = require("path"),
-    gulp = require("gulp"),
-    rename = require("gulp-rename"), /*Rename files*/
-    image = require('gulp-image'),
-    uglify = require("gulp-uglify"), /*minify file*/
-    jshint = require("gulp-jshint"), /*detect javascript code error.*/
-    concat = require("gulp-concat"),
-    size = require("gulp-filesize"),
-    minifyCss = require("gulp-minify-css"),
-    minifyHtml = require("gulp-minify-html"),
-    minifyHtmlAll = require('gulp-minifier'),
-    // imageop = require("gulp-image-optimization"),
-    clean = require("gulp-clean"),
-    browserSync = require("browser-sync"),
-    runSequence  = require("run-sequence");
+var path = require("path");
+var gulp = require("gulp");
+var rename = require("gulp-rename"); /*Rename files*/
+var image = require('gulp-image');
+var uglify = require("gulp-uglify"); /*minify file*/
+var jshint = require("gulp-jshint"); /*detect javascript code error.*/
+var concat = require("gulp-concat");
+var size = require("gulp-filesize");
+var minifyCss = require("gulp-minify-css");
+var minifyHtml = require("gulp-minify-html");
+var minifyHtmlAll = require('gulp-minifier');
+// var imageop = require("gulp-image-optimization");
+var clean = require("gulp-clean");
+var browserSync = require("browser-sync");
+var runSequence  = require("run-sequence");
 
 // :start  distribution define
-var buildPath = "dist",
-    buildJs = buildPath + "/scripts",
-    buildImg = buildPath + "/images",
-    buildCss = buildPath + "/css";
+var buildPath = "dist/";
+var buildJs = buildPath + "scripts";
+var buildImg = buildPath + "images";
+var buildCss = buildPath + "css";
+var buildFont = buildPath + "fonts";
 
 // :start public define
-var publicPath = "public",
-    publJs = publicPath + "/scripts/*.js",
-    imagesrc = publicPath + "/images/*.*";
+var publicPath = "modules/public/";
+var fontPath = publicPath + "fonts/*.*";
+var publImg = publicPath + "/images/*.*";
+var publJs = [
+  publicPath + "scripts/jquery.min.js",
+  publicPath + "scripts/jquery-ui.min.js",
+  publicPath + "scripts/base.js"
+];
+var publCss = [
+  publicPath + "css/reset.css",
+  publicPath + "css/font-awesome.mini.css",
+  publicPath + "css/base.css",
+  publicPath + "css/test.css"
+];
 
 // :start module define
-var modulePath = "*",
-    modJs = modulePath + "/scripts/*.js",
-    modCss = modulePath + "/css/*.css",
-    modImg = modulePath + "/images/*.*";
+var modulePath = "modules/*/";
+var modJs = modulePath + "scripts/*.js";
+var modCss = modulePath + "css/*.css";
+var modImg = modulePath + "images/*.*";
 
 // :start detect error and potential problem in your Javascript code
 gulp.task("hint.js",function () {
@@ -37,38 +49,58 @@ gulp.task("hint.js",function () {
         .pipe(jshint())
         .pipe(jshint.reporter('fail'));
 });
-
+// :start public
+gulp.task("public.font",function () {
+    return gulp.src(fontPath)
+        .pipe(gulp.dest(buildFont))
+        .pipe(size());
+});
 gulp.task("public.js",function () {
     return gulp.src(publJs)
         .pipe(uglify())
         .pipe(rename({dirname: ""}))
-        .pipe(concat("jquery.all.js"))
-        .pipe(gulp.dest( buildJs ))
+        .pipe(concat("base.all.js"))
+        .pipe(gulp.dest(buildJs))
         .pipe(size());
 });
 
+gulp.task("public.img",function () {
+    return gulp.src(publImg)
+        .pipe(image())
+        .pipe(rename({dirname: ""}))
+        .pipe(gulp.dest(buildImg))
+        .pipe(size());
+});
+
+gulp.task("public.css",function () {
+    return gulp.src(publCss)
+      .pipe(minifyCss())
+      .pipe(rename({dirname: ""}))
+      .pipe(concat("base.all.css"))
+      .pipe(gulp.dest(buildCss))
+      .pipe(size());
+});
+// :start module
 gulp.task("module.js",function () {
-    return gulp.src([modJs, "public/scripts/!jquery*.js", "!dist/scripts/*.js"])
+    return gulp.src([modJs, "!" + publicPath + "*/*.js"])
         .pipe(uglify())
-        .pipe(rename({dirname: "", suffix: ".mini"}))
-        .pipe(concat("base.js"))
+        .pipe(rename({dirname: ""}))
+        .pipe(concat("module.all.js"))
         .pipe(gulp.dest(buildJs))
         .pipe(size());
 });
 
 gulp.task("module.css",function () {
-    return gulp.src([modCss, "!public/css/*.css", "!dist/css/*.css"])
+    return gulp.src([modCss, "!" + publicPath + "*/*.css"])
         .pipe(minifyCss())
-        .pipe(rename({dirname: "", suffix: ".mini"}))
-        .pipe(concat("base.css"))
+        .pipe(rename({dirname: ""}))
+        .pipe(concat("module.all.css"))
         .pipe(gulp.dest(buildCss))
         .pipe(size());
 });
 
-// :start image processing
 gulp.task("module.img",function () {
-    return gulp.src([modImg, "!public/images/*.*", "!dist/images/*.*"])
-        /*.pipe(concat("jquery.plugin.js"))*/
+    return gulp.src([modImg])
         .pipe(image())
         .pipe(rename({dirname: ""}))
         .pipe(gulp.dest(buildImg))
@@ -116,7 +148,10 @@ gulp.task("module.img",function () {
 gulp.task("build",function (back) {
     runSequence(
         "clean",
+        "public.font",
         "public.js",
+        "public.css",
+        "public.img",
         "module.js",
         "module.css",
         "module.img"
