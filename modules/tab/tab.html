@@ -10,24 +10,30 @@
         <script type="text/javascript" src="../../dist/scripts/base.all.js"></script>
         <script type="text/javascript" src="../../dist/scripts/module.all.js"></script>
         <script type="text/javascript" src="scripts/tab.js" ></script>
+        <style media="screen">
+            .ntab-pane {
+                padding: 15px;
+            }
+        </style>
     </head>
     <body>
-        <div class="npanel npanel--x-info">
+        <h1 class="ntitle-xx">Tabs</h1>
+        <div class="npanel">
             <div class="npanel-body">
-
                 <div class="nrow">
                     <div class="ncol-12">
-                        <div class="ns-title-xx">Default</div>
                         <!--:start ntab navigation structure -->
                         <ul id="tab" class="ntab-box box--nav" data-target="#navbody">
-                            <li class="ntab"><a href="javascript:;">tab 01</a></li>
-                            <li class="ntab active"><a href="javascript:;">tab 02</a></li>
+                            <li class="ntab active"><a href="javascript:;">tab 01</a></li>
+                            <li class="ntab"><a href="javascript:;">tab 02</a></li>
                             <li class="ntab"><a href="javascript:;">tab 03</a></li>
                         </ul>
                         <div id="navbody" class="ntab-box">
-                            <div class="ntab-pane"><a href="">content 01</a></div>
-                            <div class="ntab-pane active"><a href="">content 02</a></div>
-                            <div class="ntab-pane"><a href="">content 03</a></div>
+                            <div class="ntab-pane active">First Tab Content
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
+                            <div class="ntab-pane">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
+                            <div class="ntab-pane">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven\'t heard of them accusamus labore sustainable VHS.</div>
                         </div>
                     </div>
                     <!--:end ntab navigation structure -->
