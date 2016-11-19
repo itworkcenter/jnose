@@ -6,20 +6,98 @@
         <link rel="stylesheet" type="text/css" href="../../dist/css/base.all.css">
         <link rel="stylesheet" type="text/css" href="../../dist/css/module.all.css">
         <link rel="stylesheet" type="text/css" href="css/layout.css">
-
+        <style media="screen">
+            .test-cell{
+                padding: 15px;
+                box-sizing: border-box;
+                background-color: #eee;
+                border: 1px solid #ccc;
+            }
+        </style>
     </head>
     <body>
-        <div style="height: 50px; border: 1px solid #eee;"></div>
-        <div class="nrow nrow-gap gap-x">
-            <div class="ncol-6">ncol-6</div>
-            <div class="ncol-6">ncol-6</div>
+        <div class="npanel">
+            <div class="npanel-head">
+                <h3 class="npanel-head-title">Columns</h3>
+            </div>
+            <div class="npanel-body">
+                <div class="nrow nrow--gap">
+                    <div class="ncol-12"><div class="test-cell">col-12</div></div>
+                </div>
+                <div class="nrow nrow--gap">
+                    <div class="ncol-6"><div class="test-cell">col-6</div></div>
+                    <div class="ncol-6"><div class="test-cell">col-6</div></div>
+                </div>
+                <div class="nrow nrow--gap">
+                    <div class="ncol-4"><div class="test-cell">col-4</div></div>
+                    <div class="ncol-4"><div class="test-cell">col-4</div></div>
+                    <div class="ncol-4"><div class="test-cell">col-4</div></div>
+                </div>
+                <div class="nrow nrow--gap">
+                    <div class="ncol-3"><div class="test-cell">col-3</div></div>
+                    <div class="ncol-3"><div class="test-cell">col-3</div></div>
+                    <div class="ncol-3"><div class="test-cell">col-3</div></div>
+                    <div class="ncol-3"><div class="test-cell">col-3</div></div>
+                </div>
+                <div class="nrow nrow--gap">
+                    <div class="ncol-6"><div class="test-cell">col-6</div></div>
+                    <div class="ncol-3"><div class="test-cell">col-3</div></div>
+                    <div class="ncol-3"><div class="test-cell">col-3</div></div>
+                </div>
+                <div class="nrow nrow--gap">
+                    <div class="ncol-8"><div class="test-cell">col-8</div></div>
+                    <div class="ncol-4"><div class="test-cell">col-4</div></div>
+                </div>
+                <div class="nrow nrow--gap">
+                    <div class="ncol-2"><div class="test-cell">col-2</div></div>
+                    <div class="ncol-2"><div class="test-cell">col-2</div></div>
+                    <div class="ncol-2"><div class="test-cell">col-2</div></div>
+                    <div class="ncol-2"><div class="test-cell">col-2</div></div>
+                    <div class="ncol-2"><div class="test-cell">col-2</div></div>
+                    <div class="ncol-2"><div class="test-cell">col-2</div></div>
+                </div>
+                <div class="nrow nrow--gap">
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                    <div class="ncol-1"><div class="test-cell">col-1</div></div>
+                </div>
+            </div>
         </div>
+
         <div class="nrow">
             <div class="ncol-6">
-                <div class="ntitle">Title</div>
-                <div class="ntitle-x">Title</div>
-                <div class="ntitle-xx">Title</div>
-                <div class="ntitle-xxx">Title</div>
+                <div class="npanel">
+                    <div class="npanel-head">
+                        <h3 class="npanel-head-title">
+                            Title
+                        </h3>
+                    </div>
+                    <div class="npanel-body">
+                        <div class="ntitle">Title</div>
+                        <div class="ntitle-x">Title x</div>
+                        <div class="ntitle-xx">Title xx</div>
+                        <div class="ntitle-xxx">Title xxx</div>
+                    </div>
+                </div>
+                <div class="npanel">
+                    <div class="npanel-head">
+                        <h3 class="npanel-head-title">
+                            Link
+                        </h3>
+                    </div>
+                    <div class="npanel-body">
+                        This line of text will render as <a href="#" class="nlink">underlined</a>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
