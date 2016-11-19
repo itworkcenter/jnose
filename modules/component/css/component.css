@@ -1,0 +1,76 @@
+/*:start breadcrumb*/
+.nbreadcrumb{
+    list-style: none;
+    padding: 5px 0;
+}
+.nbreadcrumb > li{
+    display: inline-block;
+}
+.nbreadcrumb > li + li:before {
+    content: ">\00a0";
+    padding: 0 5px;
+    color: #222;
+    font-style: normal;
+    font-weight: 400;
+}
+.nbreadcrumb > li.current {
+    font-weight: bold;
+}
+/*:start pageration*/
+.npaging{
+    display: inline-block;
+    margin-right: -1px;
+    font-size: 14px;
+    word-spacing: -3.6px;
+}
+.npaging > li{
+    position: relative;
+    display: inline-block;
+    margin: 2px 0;
+    padding: 6px 1em;
+    background-color: white;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.npaging > li + li{
+    margin-left: -1px
+}
+.npaging > li:hover{
+    background-color: #e8e8e8;
+    border-color: #d1d9de;
+    color: #000;
+}
+.npaging > li.disabled{
+    color: #777;
+    cursor: not-allowed;
+}
+.npaging > li.disabled a{
+    color: #ccc;
+    cursor: not-allowed;
+}
+.npaging > li.disabled:hover{
+    background-color: white;
+}
+.npaging > li.active{
+    background-color: #707070;
+    color: white;
+}
+.npaging > li.active a{
+    color: white;
+}
+.npaging > li i{
+    font-size: 16px;
+}
+
+/*:start paging-group*/
+.npaging-group{
+    display: inline-block;
+}
+.npaging-group > .npaging-text{
+    display: inline-block;
+    vertical-align: middle;
+}
+.npaging-group > .npaging{
+    margin: 0 15px;
+    vertical-align: middle;
+}
