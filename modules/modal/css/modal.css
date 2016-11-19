@@ -83,6 +83,7 @@
     text-align: right;
     border-top: 1px solid #eee;
 }
+.nmodal-close{}
 /*:start fade*/
 .fade {
     opacity: 0;
@@ -100,11 +101,14 @@
     right: 0;
     bottom: 0;
     left: 0;
+    display: none;
     z-index: 1000;
     background-color: #000;
     opacity: .5;
 }
-
+#overlay.open{
+    display: block;
+}
 /*:start responsive*/
 @media (min-width: 768px){
     .nmodal-box {
