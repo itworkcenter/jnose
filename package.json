@@ -25,5 +25,8 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.4",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "static-server": "^2.0.3"
   }
 }
