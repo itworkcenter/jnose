@@ -106,8 +106,29 @@ gulp.task("module.img",function () {
         .pipe(gulp.dest(buildImg))
         .pipe(size());
 });
-
-
+// :start build compress
+gulp.task("dist.css",function () {
+    return gulp.src([
+      buildCss + "/base.all.css",
+      buildCss + "/module.all.css"
+    ])
+      .pipe(minifyCss())
+      .pipe(rename({dirname: ""}))
+      .pipe(concat("jnose.min.css"))
+      .pipe(gulp.dest(buildCss))
+      .pipe(size());
+});
+gulp.task("dist.js",function () {
+    return gulp.src([
+      buildJs + "/base.all.js",
+      buildJs + "/module.all.js"
+    ])
+        .pipe(uglify())
+        .pipe(rename({dirname: ""}))
+        .pipe(concat("jnose.min.js"))
+        .pipe(gulp.dest(buildJs))
+        .pipe(size());
+});
 
 /*style-font*/
 // gulp.task("style-font",function () {
@@ -154,7 +175,9 @@ gulp.task("build",function (back) {
         "public.img",
         "module.js",
         "module.css",
-        "module.img"
+        "module.img",
+        "dist.css",
+        "dist.js"
         ,back)
 });
 // :start clean build file
