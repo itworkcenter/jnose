@@ -18,7 +18,9 @@
 }
 .npanel-head {
     position: relative;
-    padding: 10px 15px;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
     border-bottom: 1px solid #eee;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -36,14 +38,12 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    border:1px solid red;
 }
 .npanel-head-tool{
   position: relative;
     float:right;
     padding-left: 15px;
     height: 100%;
-    border: 1px solid blue;
 }
 .npanel-body {
     padding: 15px;
