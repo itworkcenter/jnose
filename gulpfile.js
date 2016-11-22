@@ -33,8 +33,7 @@ var publJs = [
 var publCss = [
   publicPath + "css/reset.css",
   publicPath + "css/font-awesome.mini.css",
-  publicPath + "css/base.css",
-  publicPath + "css/test.css"
+  publicPath + "css/base.css"
 ];
 
 // :start module define
