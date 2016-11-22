@@ -1,4 +1,7 @@
 /*:start layout*/
+.nrow{
+    word-spacing: -4.6px;
+}
 .nrow:after, .nrow:before {
     content: " ";
     display: table;
@@ -21,8 +24,10 @@
 }
 
 [class*="ncol"]{
-    float: left;
+    display: inline-block;
     box-sizing: border-box;
+    word-spacing: normal;
+    vertical-align: top;
 }
 .ncol-12 {
     width: 100%;
@@ -93,4 +98,8 @@
 /*:start link*/
 .nlink{
     text-decoration: underline;
+}
+/*:text align*/
+.ntext-right{
+    text-align: right;
 }
