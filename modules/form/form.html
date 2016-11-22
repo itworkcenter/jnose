@@ -13,19 +13,262 @@
     </head>
     <body>
       <h1 class="ntitle-xxx">Forms</h1>
-        <div class="nrow">
+        <div class="nrow nrow--gap">
+            <div class="ncol-12">
+                <div class="npanel">
+                  <div class="npanel-head">
+                    <h3 class="npanel-head-title">Inline Form</h3>
+                  </div>
+                  <div class="npanel-body">
+                          <form class="nform" action="javascript:;">
+                              <div class="nrow">
+                                  <div class="ncol-12">
+                                      <div class="nform-unit">
+                                          <label class="nform-unit-title">Email</label>
+                                          <input type="text" class="nform-text" placeholder="Enter email">
+                                      </div>
+                                      <div class="nform-unit">
+                                          <label class="nform-unit-title">Password</label>
+                                          <input type="text" class="nform-text" placeholder="Password">
+                                      </div>
+                                      <div class="nform-unit">
+                                          <label class="nform-checkbox">
+                                              <input type="checkbox" name="c1" value="2">
+                                              <span class="nform-checkbox-title">Remember me</span>
+                                          </label>
+                                      </div>
+                                      <div class="nform-unit">
+                                          <buttom class="nbtn nbtn--primary">Submit</buttom>
+                                      </div>
+                                  </div>
+
+                              </div>
+                          </form>
+                  </div>
+                </div>
+            </div>
+            <!-- :end col -->
             <div class="ncol-6">
                 <div class="npanel">
                   <div class="npanel-head">
-                    <h3 class="npanel-head-title">Basic</h3>
+                    <h3 class="npanel-head-title">Block styled form</h3>
                   </div>
                   <div class="npanel-body">
-                    <form class="nform" action="javascript:;">
-                      <div class="form-group">
-                          <label class="control-label">Firstname</label>
-                          <input type="text" class="form-control">
-                      </div>
-                    </form>
+                          <form class="nform" action="javascript:;">
+                              <div class="nrow nrow--gap">
+                                  <div class="ncol-6">
+                                      <div class="nform-unit unit--wide">
+                                          <label class="nform-unit-title">First Name</label>
+                                          <input type="text" class="nform-text" placeholder="First Name">
+                                      </div>
+                                  </div>
+                                  <div class="ncol-6">
+                                      <div class="nform-unit unit--wide">
+                                          <label class="nform-unit-title">Last Name</label>
+                                          <input type="text" class="nform-text" placeholder="Last Name">
+                                      </div>
+                                  </div>
+                                  <div class="ncol-6">
+                                      <div class="nform-unit unit--wide">
+                                          <label class="nform-unit-title">Email</label>
+                                          <input type="text" class="nform-text" placeholder="Enter email">
+                                      </div>
+                                  </div>
+                                  <div class="ncol-6">
+                                      <div class="nform-unit unit--wide">
+                                          <label class="nform-unit-title">Website</label>
+                                          <input type="text" class="nform-text" placeholder="Website">
+                                      </div>
+                                  </div>
+                                  <div class="ncol-12 ntext-right">
+                                      <button class="nbtn nbtn--primary" type="button" name="button">Submit</button>
+                                  </div>
+
+                              </div>
+                          </form>
+                  </div>
+                </div>
+            </div>
+            <div class="ncol-6">
+                <div class="npanel">
+                  <div class="npanel-head">
+                    <h3 class="npanel-head-title">Horizontal form
+</h3>
+                  </div>
+                  <div class="npanel-body">
+                          <form class="nform nform--horizontal" action="javascript:;">
+                              <div class="nrow">
+                                  <div class="ncol-3">
+                                      <div class="nform-unit unit--wide">
+                                           <label class="nform-unit-title">Email</label>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-9">
+                                      <div class="nform-unit unit--wide">
+                                          <input type="text" class="nform-text" placeholder="Enter email">
+                                      </div>
+                                  </div>
+                                  <div class="ncol-3">
+                                      <div class="nform-unit unit--wide">
+                                           <label class="nform-unit-title">Password</label>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-9">
+                                      <div class="nform-unit unit--wide">
+                                          <input type="text" class="nform-text" placeholder="Password">
+                                      </div>
+                                  </div>
+                                  <div class="ncol-3"></div>
+                                  <div class="ncol-9">
+                                      <label class="nform-checkbox">
+                                          <input type="checkbox" name="c1" value="2">
+                                          <span class="nform-checkbox-title">Remember me</span>
+                                      </label>
+                                  </div>
+                                  <div class="ncol-12 ntext-right">
+                                      <button class="nbtn nbtn--primary" type="button" name="button">Submit</button>
+                                  </div>
+                              </div>
+                          </form>
+                  </div>
+                </div>
+            </div>
+            <!-- :end col -->
+            <div class="ncol-6">
+                <div class="npanel">
+                  <div class="npanel-head">
+                    <h3 class="npanel-head-title">Component</h3>
+                  </div>
+                  <div class="npanel-body">
+                          <form class="nform" action="javascript:;">
+                              <div class="nrow">
+                                  <div class="ncol-6">
+                                      <div class="nform-unit unit--wide">
+                                          <input type="text" class="nform-text" placeholder="Enter email">
+                                      </div>
+                                  </div>
+                                  <div class="ncol-6">
+                                      <div class="nform-unit">
+                                          <div class="nform-select">
+                                              <select title="Select a Country">
+                            					<option selected="selected">United States</option>
+                            					<option>Australia</option>
+                            					<option>United Kingdom</option>
+                            					<option>India</option>
+                            					<option>Ireland</option>
+                            					<option>Netherlands</option>
+                            					<option>New Zealand</option>
+                            					<option>Poland</option>
+                            					<option>Singapore</option>
+                        				    </select>
+                                            <i class="fa fa-caret-down"></i>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-6">
+                                      <div class="nform-unit">
+                                          <label class="nform-radio">
+                                              <input type="radio" name="name" value="1">
+                                              <span class="nform-radio-title">radio 1</span>
+                                          </label>
+                                          <label class="nform-radio">
+                                              <input type="radio" name="name" value="2">
+                                              <span class="nform-radio-title">radio 2</span>
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-6">
+                                      <div class="nform-unit">
+                                          <label class="nform-checkbox">
+                                              <input type="checkbox" name="c1" value="2">
+                                              <span class="nform-checkbox-title">checkbox 1</span>
+                                          </label>
+                                          <label class="nform-checkbox">
+                                              <input type="checkbox" name="c1" value="2">
+                                              <span class="nform-checkbox-title"> checkbox 2</span>
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-12">
+                                      <div class="nform-unit unit--wide">
+                                          <label class="nform-unit-title">Message:</label>
+                                          <textarea class="nform-textarea" name="name" ></textarea>
+                                      </div>
+                                  </div>
+
+                              </div>
+                          </form>
+                  </div>
+                </div>
+            </div>
+            <div class="ncol-6">
+                <div class="npanel">
+                  <div class="npanel-head">
+                    <h3 class="npanel-head-title">Validation States</h3>
+                  </div>
+                  <div class="npanel-body">
+                          <form class="nform" action="javascript:;">
+                              <div class="nrow">
+                                  <div class="ncol-6">
+                                      <div class="nform-unit unit--wide">
+                                          <input type="text" class="nform-text be-error" placeholder="Enter email">
+                                          <span class="nform-error-info">This field is required.</span>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-6">
+                                      <div class="nform-unit">
+                                          <div class="nform-select be-error">
+                                              <select title="Select a Country">
+                            					<option selected="selected">United States</option>
+                            					<option>Australia</option>
+                            					<option>United Kingdom</option>
+                            					<option>India</option>
+                            					<option>Ireland</option>
+                            					<option>Netherlands</option>
+                            					<option>New Zealand</option>
+                            					<option>Poland</option>
+                            					<option>Singapore</option>
+                        				    </select>
+                                            <i class="fa fa-caret-down"></i>
+                                            <span class="nform-error-info">This field is required.</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-6">
+                                      <div class="nform-unit">
+                                          <label class="nform-radio">
+                                              <input type="radio" name="name" value="1">
+                                              <span class="nform-radio-title">radio 1</span>
+                                          </label>
+                                          <label class="nform-radio">
+                                              <input type="radio" name="name" value="2">
+                                              <span class="nform-radio-title">radio 2</span>
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-6">
+                                      <div class="nform-unit">
+                                          <label class="nform-checkbox be-error">
+                                              <input type="checkbox" name="c1" value="2">
+                                              <span class="nform-checkbox-title">checkbox 1</span>
+                                              <span class="nform-error-info">This field is required.</span>
+                                          </label>
+                                          <label class="nform-checkbox">
+                                              <input type="checkbox" name="c1" value="2">
+                                              <span class="nform-checkbox-title"> checkbox 2</span>
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-12">
+                                      <div class="nform-unit unit--wide">
+                                          <label class="nform-unit-title">Message:</label>
+                                          <textarea class="nform-textarea be-error" name="name" ></textarea>
+                                          <span class="nform-error-info">This field is required.</span>
+                                      </div>
+                                  </div>
+
+                              </div>
+                          </form>
                   </div>
                 </div>
             </div>
