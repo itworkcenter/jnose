@@ -1,3 +1,181 @@
-.nform{
-  
+.nform-select > select,
+.nform-textarea,
+.nform-text{
+    padding: 6px 12px;
+    height: 32px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    background: #fff;
+    font-size: 13px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.nform-select{
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+}
+.nform-select > select{
+    padding-right: 20px;
+}
+.nform-select > select + .fa{
+    margin-left: -20px;
+}
+.nform-checkbox,
+.nform-radio{
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    padding-left: 22px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    letter-spacing: normal;
+    cursor: pointer;
+}
+.nform-checkbox input[type="checkbox"],
+.nform-radio input[type="radio"] {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.nform-radio-title:before,
+.nform-radio-title:after,
+.nform-checkbox-title:before,
+.nform-checkbox-title:after{
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+}
+.nform-radio-title:after,
+.nform-checkbox-title:after{
+    z-index: 3;
+	font: normal normal normal 14px/16px FontAwesome;
+	text-rendering: auto;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.nform-radio-title:before,
+.nform-checkbox-title:before{
+    z-index: 2;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #D9D9D9;
+    background: #fff;
+}
+.nform-radio-title:before {
+    border-radius: 16px;
+}
+.nform-checkbox-title{
+    display: block;
+    min-height: 16px;
+    overflow: hidden;
+    color: #707070;
+    font-weight: normal;
+    text-overflow: ellipsis;
+}
+.nform-checkbox input[type="checkbox"]:checked + .nform-checkbox-title:after { content: "\f00c"; }
+.nform-checkbox input[type="checkbox"]:indeterminate + .nform-checkbox-title:after { content: "\f068"; }
+.nform-radio input[type="radio"]:checked + .nform-radio-title:after {
+	top: 6px;
+	left: 5px;
+	width: 6px;
+	height: 6px;
+	border-radius: 10px;
+	background: #222;
+}
+
+/*:start nform units*/
+.nform-unit{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.nform-unit.unit--wide,
+.nform-unit.unit--wide > .nform-text,
+.nform-unit.unit--wide > .nform-textarea{
+    width: 100%;
+    box-sizing: border-box;
+}
+.nform-unit-title{
+    margin-bottom: 3px;
+    overflow: hidden;
+    color: #707070;
+    font-weight: normal;
+    text-overflow: ellipsis;
+}
+.nform.nform--horizontal .nrow > [class *= "ncol"]{
+    vertical-align: middle;
+}
+.nform.nform--horizontal .nform-unit-title{
+    display: block;
+    text-align: right;
+}
+.nform-textarea {
+    height: auto;
+    max-height: 180px;
+    min-height: 65px;
+}
+
+/*:start validate*/
+.nform-checkbox.be-error > .nform-checkbox-title,
+.nform-checkbox.be-error > .nform-checkbox-title:before,
+.nform-checkbox.be-error > .nform-checkbox-title:after,
+.nform-textarea.be-error,
+.nform-select.be-error > select,
+.nform-text.be-error{
+    border-color: #cc0000;
+    color: #cc0000;
+}
+.nform-select.be-error > select + .fa{
+    color: #cc0000;
+}
+.nform-error-info {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    margin-top: 2px;
+    margin-left: 6px;
+    padding: 5px 8px;
+    border-radius: 3px;
+    background-color: #cc0000;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 12px;
+}
+.nform-error-info:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    top: -6px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent #cc0000 transparent;
+    border-width: 0 6px 6px 6px;
+}
+.nform-checkbox.be-error > .nform-checkbox-title + .nform-error-info{
+    right: inherit;
+    left: 0;
+    margin-left: 0;
+    margin-right: 6px;
+}
+.nform-checkbox.be-error > .nform-checkbox-title + .nform-error-info:after{
+    right: inherit;
+    left: 2px;
 }
