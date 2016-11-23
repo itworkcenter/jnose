@@ -41,6 +41,7 @@
 .nlist-item-arrow{
     display: none;
 }
+.nlist > .nlist-item.active .nlist-item-arrow,
 .nlist > .nlist-item.has--sub .nlist-item-arrow{
     display: inline-block;
 }
