@@ -1,0 +1,72 @@
+.nlist{}
+.nlist-item{
+    position: relative;
+    display: block;
+}
+.nlist-item + .nlist-item{
+    margin-top: -1px;
+}
+.nlist-item > a{
+    display: block;
+    padding: 10px 15px;
+}
+.nlist.nlist--hover > .nlist-item >a:hover,
+.nlist.nlist--striped > .nlist-item:nth-child(odd),
+.nlist.nlist--striped > a:nth-child(odd):not(.active):not(.disabled) {
+    background-color: rgba(0,0,0,0.06);
+}
+
+.nlist.nlist--border > .nlist-item{
+    border: 1px solid #eee;
+}
+
+.nlist.nlist--x > .nlist-item >a{
+    padding: 5px 15px;
+}
+.nlist.nlist--xx > .nlist-item >a{
+    padding: 15px;
+}
+.nlist.nlist--xxx > .nlist-item >a{
+    padding:  20px 15px;
+}
+.nlist-item-icon{}
+.nlist-item-title{
+    display: inline-block;
+    margin: 0 40px 0 30px;
+}
+.nlist-item-arrow{
+    display: none;
+}
+.nlist > .nlist-item.has--sub .nlist-item-arrow{
+    display: inline-block;
+}
+.nlist-item-badge,
+.nlist.nlist--has-icon >.nlist-item .nlist-item-icon,
+.nlist > .nlist-item.has--sub .nlist-item-arrow{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -8px;
+    width: 0;
+    height: 0;
+}
+.nlist.nlist--has-icon >.nlist-item .nlist-item-icon{
+    left: 20px;
+}
+.nlist > .nlist-item.has--sub.active .nlist-item-arrow:before{
+        content: "\f107";
+}
+.nlist-item-badge{
+    padding: 3px 6px;
+    width: auto;
+    height: auto;
+    margin-top: -10px;
+    font-size: 12px;
+    font-weight: 100;
+    color: white;
+    background-color: #42a5f5;
+    border-radius: 30%;
+}
+.nlist > .nlist-item.has--sub .nlist-item-badge{
+    right: 25px;
+}
