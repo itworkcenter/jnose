@@ -47,6 +47,7 @@
 }
 .nlist-item-badge,
 .nlist.nlist--has-icon >.nlist-item .nlist-item-icon,
+.nlist > .nlist-item.active .nlist-item-arrow,
 .nlist > .nlist-item.has--sub .nlist-item-arrow{
     position: absolute;
     top: 50%;
