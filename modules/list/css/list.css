@@ -10,6 +10,7 @@
     display: block;
     padding: 10px 15px;
 }
+.nlist.nlist--hover > .nlist-item.active >a,
 .nlist.nlist--hover > .nlist-item >a:hover,
 .nlist.nlist--striped > .nlist-item:nth-child(odd),
 .nlist.nlist--striped > a:nth-child(odd):not(.active):not(.disabled) {
