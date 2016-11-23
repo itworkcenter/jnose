@@ -19,6 +19,9 @@
 .nlist.nlist--border > .nlist-item{
     border: 1px solid #eee;
 }
+.nlist.nlist--border-row > .nlist-item + .nlist-item{
+    border-top: 1px solid #eee;
+}
 
 .nlist.nlist--x > .nlist-item >a{
     padding: 5px 15px;
