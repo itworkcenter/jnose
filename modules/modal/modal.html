@@ -7,16 +7,135 @@
         <link rel="stylesheet" type="text/css" href="../public/css/test.css">
         <link rel="stylesheet" type="text/css" href="css/modal.css">
 
-        <script type="text/javascript" src="../../dist/scripts/base.all.js"></script>
-        <script type="text/javascript" src="../../dist/scripts/module.all.js"></script>
+        <script type="text/javascript" src="../../dist/scripts/jnose.min.js"></script>
         <!-- <script type="text/javascript" src="scripts/modal.js"></script> -->
     </head>
     <body>
-        <div class="nrow">
+        <h1 class="ntitle-xxx">Modals</h1>
+        <div class="nrow nrow--gap">
             <div class="ncol-6">
-                <button class="nbtn nbtn--primary" data-toggle ="modal" data-target="#Modal1">Default</button>
-                <button class="nbtn nbtn--second" data-toggle ="modal" data-target="#Modal2" data-remote="remote.html" >Remote</button>
+                <div class="npanel">
+                    <div class="npanel-head">
+                        <h3 class="npanel-head-title">Basic</h3>
+                    </div>
+                    <div class="npanel-body">
+                        <button class="nbtn nbtn--primary" data-toggle ="modal" data-target="#Modal1">Default</button>
+                        <button class="nbtn nbtn--second" data-toggle ="modal" data-target="#Modal2" data-remote="remote.html" >Remote</button>
+                    </div>
+                </div>
             </div>
+            <!-- :end col -->
+            <div class="ncol-6">
+                <div class="npanel">
+                    <div class="npanel-head">
+                        <h3 class="npanel-head-title">Form</h3>
+                    </div>
+                    <div class="npanel-body">
+                        <button class="nbtn nbtn--success" data-toggle ="modal" data-target="#Modal-form">Form</button>
+                        <button class="nbtn nbtn--info" data-toggle ="modal" data-target="#Modal-login">Login</button>
+                    </div>
+                </div>
+            </div>
+            <!-- :end col -->
+        </div>
+        <!-- :end row -->
+
+        <div id="Modal-login" class="nmodal" tabindex="-1" role="dialog">
+          <div class="nmodal-box">
+                <div class="nmodal-box-header">
+                    <div class="to-tool">
+                        <button class="nbtn nbtn--circle nmodal-close" type="button">
+                            <i class="fa fa-times" ></i>
+                            <span class="close"></span>
+                        </button>
+                    </div>
+                    <h4 class="to-title">Modal login</h4>
+                </div>
+                <div class="nmodal-box-body">
+                    <form class="nform nform--horizontal" action="javascript:;">
+                              <div class="nrow nrow--gap">
+                                  <div class="ncol-3">
+                                      <div class="nform-unit unit--wide">
+                                           <label class="nform-unit-title">Email</label>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-9">
+                                      <div class="nform-unit unit--wide">
+                                          <input type="text" class="nform-text" placeholder="Enter email">
+                                      </div>
+                                  </div>
+                                  <div class="ncol-3">
+                                      <div class="nform-unit unit--wide">
+                                           <label class="nform-unit-title">Password</label>
+                                      </div>
+                                  </div>
+                                  <div class="ncol-9">
+                                      <div class="nform-unit unit--wide">
+                                          <input type="text" class="nform-text" placeholder="Password">
+                                      </div>
+                                  </div>
+                                  <div class="ncol-3"></div>
+                                  <div class="ncol-9">
+                                      <label class="nform-checkbox">
+                                          <input type="checkbox" name="c1" value="2">
+                                          <span class="nform-checkbox-title">Remember me</span>
+                                      </label>
+                                  </div>
+                              </div>
+                          </form>
+                </div>
+                <div class="nmodal-box-footer">
+                  <button type="button" class="nbtn nbtn--default nmodal-close">Cancel</button>
+                  <button class="nbtn nbtn--primary" type="button" name="button">Submit</button>
+                </div>
+          </div>
+        </div>
+        <div id="Modal-form" class="nmodal" tabindex="-1" role="dialog">
+          <div class="nmodal-box">
+                <div class="nmodal-box-header">
+                    <div class="to-tool">
+                        <button class="nbtn nbtn--circle nmodal-close" type="button">
+                            <i class="fa fa-times" ></i>
+                            <span class="close"></span>
+                        </button>
+                    </div>
+                    <h4 class="to-title">Modal form</h4>
+                </div>
+                <div class="nmodal-box-body">
+                    <form class="nform" action="javascript:;">
+                          <div class="nrow nrow--gap">
+                              <div class="ncol-6">
+                                  <div class="nform-unit unit--wide">
+                                      <label class="nform-unit-title">First Name</label>
+                                      <input type="text" class="nform-text" placeholder="First Name">
+                                  </div>
+                              </div>
+                              <div class="ncol-6">
+                                  <div class="nform-unit unit--wide">
+                                      <label class="nform-unit-title">Last Name</label>
+                                      <input type="text" class="nform-text" placeholder="Last Name">
+                                  </div>
+                              </div>
+                              <div class="ncol-6">
+                                  <div class="nform-unit unit--wide">
+                                      <label class="nform-unit-title">Email</label>
+                                      <input type="text" class="nform-text" placeholder="Enter email">
+                                  </div>
+                              </div>
+                              <div class="ncol-6">
+                                  <div class="nform-unit unit--wide">
+                                      <label class="nform-unit-title">Website</label>
+                                      <input type="text" class="nform-text" placeholder="Website">
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                </div>
+                <div class="nmodal-box-footer">
+                  <button type="button" class="nbtn nbtn--default nmodal-close">Cancel</button>
+                  <button class="nbtn nbtn--primary" type="button" name="button">Submit</button>
+                </div>
+          </div>
         </div>
 
         <div id="Modal2" class="nmodal" tabindex="-1" role="dialog">
