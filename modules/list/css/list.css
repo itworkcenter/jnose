@@ -1,54 +1,56 @@
 .nlist{}
 .nlist-item{
-    position: relative;
     display: block;
 }
 .nlist-item + .nlist-item{
     margin-top: -1px;
 }
-.nlist-item > a{
+.nlist-item-title{
+    position: relative;
     display: block;
     padding: 10px 15px;
 }
-.nlist.nlist--hover > .nlist-item.active >a,
-.nlist.nlist--hover > .nlist-item >a:hover,
+/*:start theme & state*/
+.nlist.nlist--hover > .nlist-item.active > .nlist-item-title,
+.nlist.nlist--hover > .nlist-item > .nlist-item-title:hover,
 .nlist.nlist--striped > .nlist-item:nth-child(odd),
 .nlist.nlist--striped > a:nth-child(odd):not(.active):not(.disabled) {
     background-color: rgba(0,0,0,0.06);
 }
-
 .nlist.nlist--border > .nlist-item{
     border: 1px solid #eee;
 }
 .nlist.nlist--border-row > .nlist-item + .nlist-item{
     border-top: 1px solid #eee;
 }
-
-.nlist.nlist--x > .nlist-item >a{
+/*:start size*/
+.nlist.nlist--x > .nlist-item > .nlist-item-title{
     padding: 5px 15px;
 }
-.nlist.nlist--xx > .nlist-item >a{
+.nlist.nlist--xx > .nlist-item > .nlist-item-title{
     padding: 15px;
 }
-.nlist.nlist--xxx > .nlist-item >a{
+.nlist.nlist--xxx > .nlist-item > .nlist-item-title{
     padding:  20px 15px;
 }
-.nlist-item-icon{}
-.nlist-item-title{
+
+/*:start item*/
+.nlist-item-title > .to-icon{}
+.nlist-item-title > .to-text{
     display: inline-block;
-    margin: 0 40px 0 30px;
 }
-.nlist-item-arrow{
+.nlist-item-title > .to-arrow{
     display: none;
+    font-size: 14px;
 }
-.nlist > .nlist-item.active .nlist-item-arrow,
-.nlist > .nlist-item.has--sub .nlist-item-arrow{
+.nlist > .nlist-item.active > .nlist-item-title > .to-arrow,
+.nlist > .nlist-item.item--sub > .nlist-item-title > .to-arrow{
     display: inline-block;
 }
-.nlist-item-badge,
-.nlist.nlist--has-icon >.nlist-item .nlist-item-icon,
-.nlist > .nlist-item.active .nlist-item-arrow,
-.nlist > .nlist-item.has--sub .nlist-item-arrow{
+.nlist-item-title > .to-badge,
+.nlist.nlist--has-icon > .nlist-item > .nlist-item-title > .to-icon,
+.nlist > .nlist-item.active > .nlist-item-title > .to-arrow,
+.nlist > .nlist-item.item--sub > .nlist-item-title > .to-arrow{
     position: absolute;
     top: 50%;
     right: 20px;
@@ -56,13 +58,19 @@
     width: 0;
     height: 0;
 }
-.nlist.nlist--has-icon >.nlist-item .nlist-item-icon{
-    left: 20px;
+/*: has icon*/
+.nlist.nlist--has-icon > .nlist-item > .nlist-item-title > .to-text{
+    margin: 0 40px 0 20px;
 }
-.nlist > .nlist-item.has--sub.active .nlist-item-arrow:before{
+.nlist.nlist--has-icon > .nlist-item > .nlist-item-title > .to-icon{
+    left: 20px;
+    left: auto;
+    right: auto;
+}
+.nlist > .nlist-item.item--sub.active > .nlist-item-title > .to-arrow:before{
         content: "\f107";
 }
-.nlist-item-badge{
+.nlist-item-title > .to-badge{
     padding: 3px 6px;
     width: auto;
     height: auto;
@@ -73,6 +81,19 @@
     background-color: #42a5f5;
     border-radius: 30%;
 }
-.nlist > .nlist-item.has--sub .nlist-item-badge{
+.nlist > .nlist-item.item--sub > .nlist-item-title > .to-badge{
     right: 25px;
+}
+/*:start sub menu*/
+/*submenu level 2*/
+.nlist-item.item--sub > .nlist > .nlist-item > .nlist-item-title{
+    padding-left: 35px;
+}
+/*submenu level 3*/
+.nlist-item.item--sub > .nlist > .nlist-item > .nlist > .nlist-item > .nlist-item-title{
+    padding-left: 55px;
+}
+/*submenu level 4*/
+.nlist-item.item--sub > .nlist > .nlist-item > .nlist > .nlist-item > .nlist > .nlist-item > .nlist-item-title{
+    padding-left: 75px;
 }
