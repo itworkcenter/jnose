@@ -88,6 +88,9 @@ body {
 	background-color: #eee;
 }
 /*:start pager*/
+.pager-inner{
+	
+}
 .pager-side{
 	position: absolute;
 	top: 0;
