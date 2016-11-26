@@ -11,7 +11,7 @@
   margin-left: -5px;
   margin-right:-5px;
 }
-.nrow.nrow--gap [class*="ncol"] {
+.nrow.nrow--gap [class*="ncol-"] {
   padding:0 5px;
   margin-bottom:5px;
 }
@@ -19,11 +19,11 @@
     margin-left: -10px;
     margin-right: -10px;
 }
-.nrow.nrow--gap.gap--x [class *= "ncol"]{
+.nrow.nrow--gap.gap--x [class*="ncol-"]{
     padding: 0 10px;
 }
 
-[class*="ncol"]{
+[class*="ncol-"]{
     display: inline-block;
     box-sizing: border-box;
     word-spacing: normal;
