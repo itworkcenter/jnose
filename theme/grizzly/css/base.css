@@ -88,14 +88,17 @@ body {
 	background-color: #eee;
 }
 /*:start pager*/
+.pager{
+	position: absolute;
+	top: 40px;
+	bottom: 0;
+}
 .pager-inner{
-	
 }
 .pager-side{
 	position: absolute;
 	top: 0;
 	left: 0;
-	bottom: 0;
 	width: 220px;
 	z-index: 4;
 	min-height: 100%;
