@@ -71,6 +71,7 @@
         content: "\f107";
 }
 .nlist-item-title > .to-badge{
+    right: 25px;
     padding: 3px 6px;
     width: auto;
     height: auto;
@@ -81,19 +82,16 @@
     background-color: #42a5f5;
     border-radius: 30%;
 }
-.nlist > .nlist-item.item--sub > .nlist-item-title > .to-badge{
-    right: 25px;
-}
 /*:start sub menu*/
 /*submenu level 2*/
-.nlist-item.item--sub > .nlist > .nlist-item > .nlist-item-title{
+.nlist-item > .nlist > .nlist-item > .nlist-item-title{
     padding-left: 35px;
 }
 /*submenu level 3*/
-.nlist-item.item--sub > .nlist > .nlist-item > .nlist > .nlist-item > .nlist-item-title{
+.nlist-item > .nlist > .nlist-item > .nlist > .nlist-item > .nlist-item-title{
     padding-left: 55px;
 }
 /*submenu level 4*/
-.nlist-item.item--sub > .nlist > .nlist-item > .nlist > .nlist-item > .nlist > .nlist-item > .nlist-item-title{
+.nlist-item > .nlist > .nlist-item > .nlist > .nlist-item > .nlist > .nlist-item > .nlist-item-title{
     padding-left: 75px;
 }
