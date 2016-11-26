@@ -5,11 +5,12 @@
         <title>Collapse</title>
         <link rel="stylesheet" type="text/css" href="../../dist/css/jnose.min.css">
         <link rel="stylesheet" type="text/css" href="../public/css/test.css">
-        <link rel="stylesheet" type="text/css" href="css/tab.css">
+        <link rel="stylesheet" type="text/css" href="css/collapse.css">
 
-        <script type="text/javascript" src="../../dist/scripts/base.all.js"></script>
-        <script type="text/javascript" src="../../dist/scripts/module.all.js"></script>
-        <script type="text/javascript" src="scripts/tab.js" ></script>
+        <!-- <script type="text/javascript" src="../../dist/scripts/jnose.min.js"></script> -->
+        <script type="text/javascript" src="../public/scripts/jquery.min.js" ></script>
+        <script type="text/javascript" src="../transition/scripts/transition.js" ></script>
+        <script type="text/javascript" src="scripts/collapse.js" ></script>
         <style media="screen">
             .ntab-pane {
                 padding: 15px;
@@ -25,14 +26,78 @@
                         <h3 class="npanel-head-title">Menu</h3>
                     </div>
                     <div class="npanel-body">
-                        <ul class="nlist nlist--border nlist--hover nlist--has-icon">
-                                    <li class="nlist-item item--sub">
-                                        <a class="nlist-item-title" href="#">
+                        <ul class="nlist nlist--border nlist--hover nlist--has-icon ncollapse-box">
+                                    <li class="nlist-item">
+                                        <a class="nlist-item-title" data-toggle="collapse"  href="#">
                                             <i class="to-icon fa fa-bars"></i>
                                             <span class="to-text">Menus</span>
                                             <i class="to-arrow fa fa-angle-right"></i>
                                         </a>
-                                        <ul class="nlist nlist--border-row nlist--has-icon nlist--hover collapse in" aria-expanded="true">
+                                        <ul id="Collapse-one" class="nlist nlist--border-row nlist--has-icon nlist--hover ncollapse" aria-expanded="true">
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-toggle-on" ></i>
+                                                    <span class="to-text">Buttons</span>
+                                                </a>
+                                                <div class="ncollapse">fffff</div>
+                                            </li>
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-sticky-note" ></i>
+                                                    <span class="to-text">Panels</span>
+                                                </a>
+                                            </li>
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-square" ></i>
+                                                    <span class="to-text">Modals</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nlist-item item--sub active">
+                                        <a class="nlist-item-title" data-toggle="collapse" data-parent=".ncollapse-box" data-target="#Collapse-two" href="#">
+                                            <i class="to-icon fa fa-envelope"></i>
+                                            <span class="to-text">Messages</span>
+                                            <span class="to-badge">56</span>
+                                        </a>
+                                        <ul id="Collapse-two" class="nlist nlist--border-row nlist--has-icon nlist--hover ncollapse" aria-expanded="true">
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-toggle-on" ></i>
+                                                    <span class="to-text">Buttons</span>
+                                                </a>
+                                            </li>
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-toggle-on" ></i>
+                                                    <span class="to-text">Buttons</span>
+                                                </a>
+                                            </li>
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-toggle-on" ></i>
+                                                    <span class="to-text">Buttons</span>
+                                                </a>
+                                            </li>
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-toggle-on" ></i>
+                                                    <span class="to-text">Buttons</span>
+                                                </a>
+                                            </li>
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-toggle-on" ></i>
+                                                    <span class="to-text">Buttons</span>
+                                                </a>
+                                            </li>
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-toggle-on" ></i>
+                                                    <span class="to-text">Buttons</span>
+                                                </a>
+                                            </li>
                                             <li class="nlist-item">
                                                 <a class="nlist-item-title" href="#">
                                                     <i class="to-icon fa fa-toggle-on" ></i>
@@ -53,19 +118,32 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nlist-item">
-                                        <a class="nlist-item-title" href="#">
-                                            <i class="to-icon fa fa-envelope"></i>
-                                            <span class="to-text">Messages</span>
-                                            <span class="to-badge">56</span>
-                                        </a>
-                                    </li>
                                     <li class="nlist-item item--sub active">
-                                        <a class="nlist-item-title" href="#">
+                                        <a class="nlist-item-title" data-toggle="collapse" data-parent=".ncollapse-box" data-target="#Collapse-three" href="#">
                                             <i class="to-icon fa fa-cog"></i>
                                             <span class="to-text">Settings</span>
                                             <i class="to-arrow fa fa-angle-right"></i>
                                         </a>
+                                        <ul id="Collapse-three" class="nlist nlist--border-row nlist--has-icon nlist--hover ncollapse" aria-expanded="true">
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-toggle-on" ></i>
+                                                    <span class="to-text">Buttons</span>
+                                                </a>
+                                            </li>
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-sticky-note" ></i>
+                                                    <span class="to-text">Panels</span>
+                                                </a>
+                                            </li>
+                                            <li class="nlist-item">
+                                                <a class="nlist-item-title" href="#">
+                                                    <i class="to-icon fa fa-square" ></i>
+                                                    <span class="to-text">Modals</span>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
 
@@ -76,8 +154,3 @@
 
     </body>
 </html>
-<script type="text/javascript">
-    $("#tab").on("show.n.tab",function(e){
-        console.log(e);
-    })
-</script>
