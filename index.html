@@ -12,11 +12,12 @@
 		<script type="text/javascript" src="dist/scripts/jnose.min.js" ></script>
   </head>
   <body>
+		<div id="overlay"></div>
 		<div class="header">
 			<div class="header-inner">
 				<div class="nav-header">
 					<a class="nav-header-brand" href="#">
-						<i class="to-icon fa fa-star-o" aria-hidden="true"></i>
+						<i class="to-icon fa fa-star-o" ></i>
 						<h1 class="to-text">Jnose <i class="to-text-version">Grizzly</i></h1>
 					</a>
 				</div>
@@ -24,18 +25,18 @@
 					<ul class="nav-list list--left">
             <li>
                 <a href="#">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <i class="fa fa-bars" ></i>
                 </a>
             </li>
             <li>
                 <a href="#">
-                  <i class="fa fa-bell-o" aria-hidden="true"></i>
+                  <i class="fa fa-bell-o" ></i>
                     <span class="badge badge-header badge-danger"></span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-th-large" aria-hidden="true"></i>
+                    <i class="fa fa-th-large" ></i>
                 </a>
             </li>
           </ul>
@@ -43,18 +44,18 @@
 					<ul class="nav-list list--right">
 						<li>
                 <a href="#">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-									Carl Liu
+                  <i class="fa fa-user" ></i>
+									Jnose Marks
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <i class="fa fa-globe" ></i>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    <i class="fa fa-ellipsis-v" ></i>
                 </a>
             </li>
           </ul>
@@ -72,8 +73,8 @@
 							<img class="to-img" src="theme/grizzly/images/1.png" alt="User">
 						</div>
 						<div class="user-profile-info">
-							<p class="to-name">Carl Liu</p>
-							<p class="to-desc">carl.liu@gmail.com</p>
+							<p class="to-name">Jnose</p>
+							<p class="to-desc">service@jnose.com</p>
 						</div>
 					</div>
 					<!-- :end user profile -->
@@ -82,26 +83,26 @@
 							<li class="nlist-item item--title">Navigation</li>
               <li class="nlist-item">
                   <a class="nlist-item-title" data-toggle="collapse" href="#">
-											<i class="to-icon fa fa-home" aria-hidden="true"></i>
+											<i class="to-icon fa fa-home" ></i>
                       <span class="to-text">Dashboard</span>
                   </a>
               </li>
               <li class="nlist-item">
                   <a class="nlist-item-title" data-toggle="collapse" href="#">
-											<i class="to-icon fa fa-columns" aria-hidden="true"></i>
+											<i class="to-icon fa fa-columns" ></i>
                       <span class="to-text">Layout</span>
                   </a>
               </li>
               <li class="nlist-item">
                   <a class="nlist-item-title" data-toggle="collapse" href="#">
-											<i class="to-icon fa fa-cogs" aria-hidden="true"></i>
+											<i class="to-icon fa fa-cogs" ></i>
                       <span class="to-text">Widget</span>
                   </a>
               </li>
 							<li class="nlist-item item--title">Components</li>
 							<li class="nlist-item item--sub">
                   <a class="nlist-item-title" data-toggle="collapse" href="#">
-											<i class="to-icon fa fa-magnet" aria-hidden="true"></i>
+											<i class="to-icon fa fa-magnet" ></i>
                       <span class="to-text">UI Elements</span>
 											<i class="to-arrow fa fa-angle-right" ></i>
                   </a>
@@ -155,26 +156,26 @@
               </li>
 							<li class="nlist-item">
                   <a class="nlist-item-title" data-toggle="collapse" href="#">
-											<i class="to-icon fa fa-pencil-square-o" aria-hidden="true"></i>
+											<i class="to-icon fa fa-pencil-square-o" ></i>
                       <span class="to-text">Forms</span>
                   </a>
               </li>
 							<li class="nlist-item">
                   <a class="nlist-item-title" data-toggle="collapse" href="#">
-											<i class="to-icon fa fa-table" aria-hidden="true"></i>
+											<i class="to-icon fa fa-table" ></i>
                       <span class="to-text">Tables</span>
                   </a>
               </li>
 							<li class="nlist-item">
                   <a class="nlist-item-title" data-toggle="collapse" href="#">
-											<i class="to-icon fa fa-pie-chart" aria-hidden="true"></i>
+											<i class="to-icon fa fa-pie-chart" ></i>
                       <span class="to-text">Charts</span>
                   </a>
               </li>
 							<li class="nlist-item item--title">More</li>
 							<li class="nlist-item">
                   <a class="nlist-item-title" data-toggle="collapse" href="#">
-											<i class="to-icon fa fa-file-text" aria-hidden="true"></i>
+											<i class="to-icon fa fa-file-text" ></i>
                       <span class="to-text">Pages</span>
                   </a>
               </li>
@@ -183,8 +184,22 @@
 
 				</div>
 				<!-- :end pager side -->
-				<div class="pager-content">
+				<div class="pager-container">
+					<div class="pager-x-title">Modals</div>
+					<div class="pager-x-content">
+						<div class="ncol-6">
+                <div class="npanel">
+                    <div class="npanel-head">
+                        <h3 class="npanel-head-title">Form</h3>
+                    </div>
+                    <div class="npanel-body">
+                        <button class="nbtn nbtn--success" data-toggle ="modal" data-target="#Modal-form">Form</button>
+                        <button class="nbtn nbtn--info" data-toggle ="modal" data-target="#Modal-login">Login</button>
+                    </div>
+                </div>
+            </div>
 
+					</div>
 				</div>
 				<!-- :end pager content -->
 
@@ -193,19 +208,106 @@
 		</div>
 		<div class="footer">
 			<div class="footer-inner">
-
+				<p class="pad-lft">© 2016 Your Company</p>
 			</div>
 		</div>
-    <!-- <h1 class="ntitle-xxx">Jonse</h1>
-    <div class="npanel">
-      <div class="npanel-body">
-        <div class="narticle">
-          <h2>Designed for everyone, everywhere.</h2>
-          <p>
-            Jnose makes front-end web development faster and easier. It's made for folks of all skill levels, devices of all shapes, and projects of all sizes.
-          </p>
-        </div>
-      </div>
-    </div> -->
+
+		<div id="Modal-login" class="nmodal" tabindex="-1" role="dialog">
+			<div class="nmodal-box">
+						<div class="nmodal-box-header">
+								<div class="to-tool">
+										<button class="nbtn nbtn--circle nmodal-close" type="button">
+												<i class="fa fa-times" ></i>
+												<span class="close"></span>
+										</button>
+								</div>
+								<h4 class="to-title">Modal login</h4>
+						</div>
+						<div class="nmodal-box-body">
+								<form class="nform nform--horizontal" action="javascript:;">
+													<div class="nrow nrow--gap">
+															<div class="ncol-3">
+																	<div class="nform-unit unit--wide">
+																			 <label class="nform-unit-title">Email</label>
+																	</div>
+															</div>
+															<div class="ncol-9">
+																	<div class="nform-unit unit--wide">
+																			<input type="text" class="nform-text" placeholder="Enter email">
+																	</div>
+															</div>
+															<div class="ncol-3">
+																	<div class="nform-unit unit--wide">
+																			 <label class="nform-unit-title">Password</label>
+																	</div>
+															</div>
+															<div class="ncol-9">
+																	<div class="nform-unit unit--wide">
+																			<input type="text" class="nform-text" placeholder="Password">
+																	</div>
+															</div>
+															<div class="ncol-3"></div>
+															<div class="ncol-9">
+																	<label class="nform-checkbox">
+																			<input type="checkbox" name="c1" value="2">
+																			<span class="nform-checkbox-title">Remember me</span>
+																	</label>
+															</div>
+													</div>
+											</form>
+						</div>
+						<div class="nmodal-box-footer">
+							<button type="button" class="nbtn nbtn--default nmodal-close">Cancel</button>
+							<button class="nbtn nbtn--primary" type="button" name="button">Submit</button>
+						</div>
+			</div>
+		</div>
+		<div id="Modal-form" class="nmodal" tabindex="-1" role="dialog">
+			<div class="nmodal-box">
+						<div class="nmodal-box-header">
+								<div class="to-tool">
+										<button class="nbtn nbtn--circle nmodal-close" type="button">
+												<i class="fa fa-times" ></i>
+												<span class="close"></span>
+										</button>
+								</div>
+								<h4 class="to-title">Modal form</h4>
+						</div>
+						<div class="nmodal-box-body">
+								<form class="nform" action="javascript:;">
+											<div class="nrow nrow--gap">
+													<div class="ncol-6">
+															<div class="nform-unit unit--wide">
+																	<label class="nform-unit-title">First Name</label>
+																	<input type="text" class="nform-text" placeholder="First Name">
+															</div>
+													</div>
+													<div class="ncol-6">
+															<div class="nform-unit unit--wide">
+																	<label class="nform-unit-title">Last Name</label>
+																	<input type="text" class="nform-text" placeholder="Last Name">
+															</div>
+													</div>
+													<div class="ncol-6">
+															<div class="nform-unit unit--wide">
+																	<label class="nform-unit-title">Email</label>
+																	<input type="text" class="nform-text" placeholder="Enter email">
+															</div>
+													</div>
+													<div class="ncol-6">
+															<div class="nform-unit unit--wide">
+																	<label class="nform-unit-title">Website</label>
+																	<input type="text" class="nform-text" placeholder="Website">
+															</div>
+													</div>
+											</div>
+									</form>
+						</div>
+						<div class="nmodal-box-footer">
+							<button type="button" class="nbtn nbtn--default nmodal-close">Cancel</button>
+							<button class="nbtn nbtn--primary" type="button" name="button">Submit</button>
+						</div>
+			</div>
+		</div>
   </body>
 </html>
