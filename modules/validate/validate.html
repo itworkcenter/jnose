@@ -2,68 +2,61 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Validate</title>
+        <title>Mask</title>
         <link rel="stylesheet" type="text/css" href="../../dist/css/jnose.min.css">
         <link rel="stylesheet" type="text/css" href="../public/css/test.css">
-        <link rel="stylesheet" type="text/css" href="css/validate.css">
+        <link rel="stylesheet" type="text/css" href="css/checkholder.css">
 
         <!-- <script type="text/javascript" src="../../dist/scripts/jnose.min.js"></script> -->
         <script type="text/javascript" src="../public/scripts/jquery.min.js" ></script>
         <script type="text/javascript" src="scripts/maskinput.js" ></script>
+        <script type="text/javascript" src="scripts/checkholder.js" ></script>
     </head>
     <body>
-        <h1 class="ntitle-xx">Validate</h1>
-        <div class="nrow">
-            <div class="ncol-4">
-                <div class="npanel">
-                    <div class="npanel-head">
-                        <h3 class="npanel-head-title">Menu</h3>
-                    </div>
-                    <div class="npanel-body">
-                        <form class="nform nform--horizontal" action="javascript:;">
-                              <div class="nrow nrow--gap">
-                                  <div class="ncol-3">
-                                      <div class="nform-unit unit--wide">
-                                           <label class="nform-unit-title">Date</label>
-                                      </div>
-                                  </div>
-                                  <div class="ncol-9">
-                                      <div class="nform-unit unit--wide">
-                                          <input id="date" type="text" class="nform-text" placeholder="Enter Date">
-                                      </div>
-                                  </div>
-                                  <div class="ncol-3">
-                                      <div class="nform-unit unit--wide">
-                                           <label class="nform-unit-title">Phone</label>
-                                      </div>
-                                  </div>
-                                  <div class="ncol-9">
-                                      <div class="nform-unit unit--wide">
-                                          <input id="phone" type="text" class="nform-text" placeholder="Enter Phone">
-                                      </div>
-                                  </div>
-                                  <div class="ncol-3"></div>
-                                  <div class="ncol-9">
-                                      <label class="nform-checkbox">
-                                          <input type="checkbox" name="c1" value="2">
-                                          <span class="nform-checkbox-title">Remember me</span>
-                                      </label>
-                                  </div>
-                                  <div class="ncol-12 ntext-right">
-                                      <button class="nbtn nbtn--primary" type="button" name="button">Submit</button>
-                                  </div>
-                              </div>
-                          </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1 class="ntitle-xx">Mask</h1>
+        <div class="nrow nrow--gap">
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Date</label>
+                      <input id="date" type="text" class="nform-text">
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Phone</label>
+                      <input id='phone' type="text" class="nform-text" data-mask="(999)999-9999">
+                      <input id='phone' type="text" class="nform-text">
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Email</label>
+                      <!-- <input type="text" class="nform-text" data-mask="w@w.w"> -->
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Credit Card</label>
+                      <!-- <input type="text" class="nform-text" data-mask="9999 9999 9999 9999"> -->
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Gift Card</label>
+                      <!-- <input type="text" class="nform-text" data-mask="wwwwww"> -->
+                  </div>
+              </div>
+              <div class="ncol-12 ntext-right">
+                  <button class="nbtn nbtn--primary" type="button" name="button">Submit</button>
+              </div>
+
+          </div>
 
     </body>
 </html>
 <script type="text/javascript">
-    jQuery(function($){
-    $("#date").mask("99/99/9999",{placeholder:"mm/dd/yyyy"});
-    $("#phone").mask("(999) 999-9999");
-    });
+    // jQuery(function($){
+    // $("#date").mask("99/99/9999", {placeholder:"mm/dd/yyyy"});
+    // $("#phone").mask("(999) 999-9999");
+    // });
 </script>
