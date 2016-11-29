@@ -1,5 +1,5 @@
 /* *******************************
- * checkholder.js v1.0.0
+ * Mask.js v1.0.0
  * Creator: Carl Liu
  * Date: 2016.11.28
  * Notice: Form input mask validate.
@@ -17,13 +17,13 @@
 +function(window, $, document, undefined) {
     'use strict';
 
-    var Checkholder = function(element) {
+    var Mask = function(element) {
         var self = this,
             $this = $(this);
 
         this.$el = $(element);
         //Option priority: self data> default
-        this.options = $.extend({}, Checkholder.DEFAULTS, self.$el.data());
+        this.options = $.extend({}, Mask.DEFAULTS, self.$el.data());
 
         this.setMask();
 
@@ -39,7 +39,7 @@
         })
     }
 
-    Checkholder.fn = Checkholder.prototype ={
+    Mask.fn = Mask.prototype ={
         check: function(){
             // check holder
         },
@@ -68,8 +68,8 @@
     // :end fn
 
     // Default options define
-    Checkholder.VERSION = "1.0.0";
-    Checkholder.DEFAULTS = {
+    Mask.VERSION = "1.0.0";
+    Mask.DEFAULTS = {
         definition: {
             "9": "[0-9]",
             a: "[A-Za-z]",
@@ -81,12 +81,12 @@
 
 // element load
 $(function(){
-    // load checkholder
+    // load Mask
     $("[data-mask]").each(function(){
         var $this = $(this);
         var api = $this.data("n.mask");
 
-        if (!api) $this.data('n.collapse', (api = new Checkholder(this)));
+        if (!api) $this.data('n.collapse', (api = new Mask(this)));
 
         api["check"]();
     })
