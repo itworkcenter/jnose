@@ -1,5 +1,5 @@
 /* *******************************
- * Mask.js v1.0.0
+ * Checkmask.js v1.0.0
  * Creator: Carl Liu
  * Date: 2016.11.28
  * Notice: Form input mask validate.
@@ -17,44 +17,75 @@
 +function(window, $, document, undefined) {
     'use strict';
 
-    var Mask = function(element) {
-        var self = this,
-            $this = $(this);
-
-        this.$el = $(element);
-        //Option priority: self data> default
-        this.options = $.extend({}, Mask.DEFAULTS, self.$el.data());
-
-        this.setMask();
-
-        $this
-        .on("focus.mask", function(){
-
-        })
-        .on("blur.mask", function(){
-
-        })
-        .on("keydown.mask", function(){
-
-        })
+    var Checkmask = function(element, options) {
+        this.init(element, options);
     }
 
-    Mask.fn = Mask.prototype ={
+    Checkmask.fn = Checkmask.prototype ={
+        init: function(element, options){
+            var self = this, $el;
+            var len;
+
+            this.$el = $el = $(element);
+            //Option priority: self data> default
+            this.options = $.extend({}, Checkmask.DEFAULTS, options, $el.data());
+            this.setCheckmask();
+
+            $el
+            .on("focus.mask", focusEvent)
+            .on("blur.mask", blurEvent)
+            .on("keydown.mask", keydownEvent)
+            .on("keypress.mask", keypressEvent);
+        },
+        readOnly: function(){
+            return this.$el.prop("readonly");
+        },
+        focusEvent: function(){
+            // Focus Event
+            if(self.readOnly()){return};
+
+        },
+        blurEvent: function(){
+            // Focus Event
+            if(self.readOnly()){return};
+
+        },
+        keypressEvent: function(e){
+            //keypress Event
+            if(self.readOnly()){return};
+
+
+        },
+        keydownEvent: function(e){
+            //keydown Event
+            if(self.readOnly()){return};
+
+
+        },
         check: function(){
             // check holder
         },
-        setMask: function(){
-            console.log("setMask");
-            // set Mask
-            this.$el.val(this.getMask());
+        seekNext: function(pos){
+            var len = this.len;
+            for (;++pos < len && !tests[pos]; ) ;
+            return pos;
         },
-        getMask: function(){
-            console.log("getmask");
+        seekPrev: function(pos){
+            for (;--pos >= 0 && !tests[pos]; )
+            return pos;
+        },
+        setCheckmask: function(){
+            var dd,aa
+            // set Checkmask
+            this.$el.val(this.getCheckmask());
+        },
+        getCheckmask: function(){
             // get mask
-            var self = this,
-                definition = this.options.definition,
-                mask = this.options.mask,
-                reslt = $.map(mask.split(""), function(el, index){
+            var self = this;
+            var definition = this.options.definition;
+            var mask = this.options.mask;
+
+            var reslt = $.map(mask.split(""), function(el, index){
                     return definition[el] ? self.getPlaceholderIndex(index) : el;
                 }).join(" ");
                 this.mask = reslt;
@@ -68,8 +99,8 @@
     // :end fn
 
     // Default options define
-    Mask.VERSION = "1.0.0";
-    Mask.DEFAULTS = {
+    Checkmask.VERSION = "1.0.0";
+    Checkmask.DEFAULTS = {
         definition: {
             "9": "[0-9]",
             a: "[A-Za-z]",
@@ -79,16 +110,25 @@
         placeholder: "_"
     };
 
+    // Plugin Definition
+    function Plugin(option) {
+        return this.each(function() {
+            var $this = $(this),
+                  api = $this.data("n.checkmask");
+
+            if (!api) $this.data('n.checkmask', (api = new Checkmask(this, option)));
+        })
+    }
+
+    var old = $.fn.checkmask;
+
+    $.fn.checkmask = Plugin;
+    $.fn.checkmask.Constructor = Checkmask;
+
+}(window, jQuery, document);
+
 // element load
 $(function(){
-    // load Mask
-    $("[data-mask]").each(function(){
-        var $this = $(this);
-        var api = $this.data("n.mask");
-
-        if (!api) $this.data('n.collapse', (api = new Mask(this)));
-
-        api["check"]();
-    })
+    // load Checkmask
+    $("[data-mask]").checkmask();
 });
-}(window, jQuery, document);
