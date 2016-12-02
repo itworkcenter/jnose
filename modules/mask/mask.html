@@ -2,18 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Mask</title>
+        <title>Checkmask</title>
         <link rel="stylesheet" type="text/css" href="../../dist/css/jnose.min.css">
         <link rel="stylesheet" type="text/css" href="../public/css/test.css">
-        <link rel="stylesheet" type="text/css" href="css/mask.css">
 
         <!-- <script type="text/javascript" src="../../dist/scripts/jnose.min.js"></script> -->
         <script type="text/javascript" src="../public/scripts/jquery.min.js" ></script>
         <script type="text/javascript" src="scripts/maskinput.js" ></script>
-        <script type="text/javascript" src="scripts/mask.js" ></script>
+        <script type="text/javascript" src="scripts/checkmask.js" ></script>
     </head>
     <body>
-        <h1 class="ntitle-xx">Mask</h1>
+        <h1 class="ntitle-xx">Checkmask</h1>
         <div class="nrow nrow--gap">
               <div class="ncol-6">
                   <div class="nform-unit unit--wide">
@@ -24,7 +23,7 @@
               <div class="ncol-6">
                   <div class="nform-unit unit--wide">
                       <label class="nform-unit-title">Phone</label>
-                      <input id='phone' type="text" class="nform-text" data-mask="(999)999-9999">
+                      <input type="text" class="nform-text" data-mask="(9 9 9)9 9 9-9 9 9 9">
                       <input id='phone' type="text" class="nform-text">
                   </div>
               </div>
@@ -57,6 +56,7 @@
 <script type="text/javascript">
     // jQuery(function($){
     // $("#date").mask("99/99/9999", {placeholder:"mm/dd/yyyy"});
-    // $("#phone").mask("(999) 999-9999");
+    $("#phone").mask("(999) 999-9999");
     // });
 </script>
+<!--  -->
