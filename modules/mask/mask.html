@@ -8,7 +8,7 @@
 
         <!-- <script type="text/javascript" src="../../dist/scripts/jnose.min.js"></script> -->
         <script type="text/javascript" src="../public/scripts/jquery.min.js" ></script>
-        <script type="text/javascript" src="scripts/maskinput.js" ></script>
+        <!-- <script type="text/javascript" src="scripts/maskinput.js" ></script> -->
         <script type="text/javascript" src="scripts/checkmask.js" ></script>
     </head>
     <body>
@@ -23,8 +23,8 @@
               <div class="ncol-6">
                   <div class="nform-unit unit--wide">
                       <label class="nform-unit-title">Phone</label>
-                      <input type="text" class="nform-text" data-mask="(9 9 9)9 9 9-9 9 9 9">
-                      <input id='phone' type="text" class="nform-text">
+                      <!-- <input type="text" class="nform-text" data-mask="(9 9 9)9 9 9-9 9 9 9">
+                      <input id='phone' type="text" class="nform-text"> -->
                   </div>
               </div>
               <div class="ncol-6">
@@ -42,7 +42,8 @@
               <div class="ncol-6">
                   <div class="nform-unit unit--wide">
                       <label class="nform-unit-title">Gift Card</label>
-                      <!-- <input type="text" class="nform-text" data-mask="wwwwww"> -->
+                      <input id="mm" type="text" class="nform-text">
+                      <input id="dd" type="text" class="nform-text" data-mask="www www www">
                   </div>
               </div>
               <div class="ncol-12 ntext-right">
@@ -54,9 +55,19 @@
     </body>
 </html>
 <script type="text/javascript">
-    // jQuery(function($){
+
     // $("#date").mask("99/99/9999", {placeholder:"mm/dd/yyyy"});
-    $("#phone").mask("(999) 999-9999");
+    // $("#phone").checkmask({
+    //     mask: "(999) 999-9999",
+    //     check: function(data){
+    //         //data = {success:true}
+    //
+    //     }
     // });
+    $("#mm").checkmask({mask: "(999) 999-9999"});
+    // $("#dd").checkmask({mask: "(999) 999-9999"});
+    $("#dd").checkmask();
+    // $("[data-mask]").checkmask();
+
 </script>
 <!--  -->
