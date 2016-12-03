@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Checkmask</title>
+        <link rel="stylesheet" type="text/css" href="../../dist/css/jnose.min.css">
+        <link rel="stylesheet" type="text/css" href="../public/css/test.css">
+
+        <!-- <script type="text/javascript" src="../../dist/scripts/jnose.min.js"></script> -->
+        <script type="text/javascript" src="../public/scripts/jquery.min.js" ></script>
+        <script type="text/javascript" src="scripts/maskinput.js" ></script>
+        <script type="text/javascript" src="scripts/checkmask.js" ></script>
+    </head>
+    <body>
+        <h1 class="ntitle-xx">Checkmask</h1>
+        <div class="nrow nrow--gap">
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Date</label>
+                      <input id="date" type="text" class="nform-text">
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Phone</label>
+                      <input type="text" class="nform-text" data-mask="(9 9 9)9 9 9-9 9 9 9">
+                      <input id='phone' type="text" class="nform-text">
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Email</label>
+                      <!-- <input type="text" class="nform-text" data-mask="w@w.w"> -->
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Credit Card</label>
+                      <!-- <input type="text" class="nform-text" data-mask="9999 9999 9999 9999"> -->
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Gift Card</label>
+                      <!-- <input type="text" class="nform-text" data-mask="wwwwww"> -->
+                  </div>
+              </div>
+              <div class="ncol-12 ntext-right">
+                  <button class="nbtn nbtn--primary" type="button" name="button">Submit</button>
+              </div>
+
+          </div>
+
+    </body>
+</html>
+<script type="text/javascript">
+    // jQuery(function($){
+    // $("#date").mask("99/99/9999", {placeholder:"mm/dd/yyyy"});
+    $("#phone").mask("(999) 999-9999");
+    // });
+</script>
+<!--  -->
