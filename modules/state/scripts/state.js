@@ -22,7 +22,7 @@
      var SELECTOR = {
          state: ".nstate",
          hover: ".nstate.hover",
-         activeClass: "nstate--active"
+         activeClass: "active"
      };
     //  Just have one instance
      if(win.nStateId) return;
