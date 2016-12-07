@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Inputtest</title>
+        <link rel="stylesheet" type="text/css" href="../../dist/css/jnose.min.css">
+        <link rel="stylesheet" type="text/css" href="../public/css/test.css">
+
+        <!-- <script type="text/javascript" src="../../dist/scripts/jnose.min.js"></script> -->
+        <script type="text/javascript" src="../public/scripts/jquery.min.js" ></script>
+        <!-- <script type="text/javascript" src="scripts/maskinput.js" ></script> -->
+        <script type="text/javascript" src="scripts/inputtest.js" ></script>
+        <style media="screen">
+            body{
+                width: 600px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="ntitle-xx">Inputtest</h1>
+        <div class="nrow nrow--gap">
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Date</label>
+                      <input id="date" type="text" class="nform-text" data-toggle="test" data-use="text">
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Phone</label>
+                      <!-- <input type="text" class="nform-text" data-mask="(9 9 9)9 9 9-9 9 9 9"> -->
+                      <input id='phone' type="text" class="nform-text" data-toggle="test" data-use="phone">
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Email</label>
+                      <input id="mail" type="text" class="nform-text" data-toggle="test" data-use="email">
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Credit Card</label>
+                      <input id="card" type="text" class="nform-text" data-toggle="test" data>
+                  </div>
+              </div>
+              <div class="ncol-6">
+                  <div class="nform-unit unit--wide">
+                      <label class="nform-unit-title">Password</label>
+                      <input id="password" type="password" class="nform-text" data-toggle="test">
+                  </div>
+              </div>
+              <div class="ncol-12 ntext-right">
+                  <button class="nbtn nbtn--primary" type="button" name="button">Submit</button>
+              </div>
+
+          </div>
+
+    </body>
+</html>
+<script type="text/javascript">
+
+    // $("#date").inputtest("99/99/9999", {placeholder:"mm/dd/yyyy"});
+    // $("#phone").inputtest({
+    //     mask: "(999) 999-9999",
+    //     check: function(data){
+    //         //data = {success:true}
+    //
+    //     }
+    // });
+    // $("#mm").inputtest("99/99/9999", {placeholder:"mm/dd/yyyy"});
+    $("#date").inputtest({mask: "99/99/9999", placeholder: "mm/dd/yyyy"});
+    $("#phone").inputtest({
+        mask: "(9 9 9) 9 9  9 9 9",
+        back: function(data){
+            console.log(data);
+        },
+        complete: function(data){
+            console.log("complete");
+        }
+    });
+    $("#card").inputtest({mask: "9999 9999 9999 9999"});
+
+    $("#password").inputtest({
+        mask: "9999 9999 9999 9999",
+        back: function(data){
+            console.log("password--process");
+        },
+        complete: function(data){
+            console.log("password--complete");
+        }
+    });
+    $("#mail").inputtest({
+        mask: "www@www.www",
+        limit: false,
+        back: function(data){
+            //data: {success: true}
+            $.get("http://localhost:8844", function(data){
+                //data: {success: false}
+            });
+            this.check(data);
+        },
+        complete: function(data){
+            $.get("http://localhost:8844", function(data){
+                //data: {success: false}
+            })
+        }
+    });
+
+</script>
