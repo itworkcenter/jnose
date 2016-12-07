@@ -1,5 +1,5 @@
 /* *******************************
- * state.js v1.0.0
+ * state.js v1.1.0
  * Creator: Carl Liu
  * Date: 2016.11.18
  * Notice: State control have one trigger.
