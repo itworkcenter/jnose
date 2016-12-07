@@ -8,45 +8,53 @@
         <link rel="stylesheet" type="text/css" href="css/state.css">
 
         <script type="text/javascript" src="../../dist/scripts/base.all.js"></script>
-        <script type="text/javascript" src="../../dist/scripts/module.all.js"></script>
+        <!-- <script type="text/javascript" src="../../dist/scripts/module.all.js"></script> -->
         <script type="text/javascript" src="scripts/state.js"></script>
         <style media="screen">
-            .test-menu{
-                float: left;
-                margin-top: 5px;
-                padding: 15px;
-                border: 1px solid #ccc;
-                border-radius: 3px;
+            body{
+                max-width: 800px;
             }
-
+            .nstate-box{
+                padding: 15px;
+            }
             .test-box{
                 position: relative;
+                display: inline-block;
+                margin: 2px;
+            }
+            .test-box .nstate-box{
+                position: absolute;;
+                background-color: white;
             }
         </style>
     </head>
     <body>
         <div class="ntitle-xx">State</div>
         <div class="nrow">
-            <div class="ncol-6">
-                <div class="test-box">
-                    <div class="ntitle-x">Drop down</div>
-                    <button class="nbtn nbtn--primary nstate nstate--active">Dropmenu</button>
-                    <div class="nstate-box">
-                        <ul class="test-menu">
-                            <li><a href="javascript:;">Form UI</a></li>
-                            <li><a href="javascript:;">Table</a></li>
-                            <li><a href="javascript:;">Layer</a></li>
-                            <li><a href="javascript:;">Chart</a></li>
-                        </ul>
+            <div class="ncol-12">
+                <div class="npanel">
+                    <div class="npanel-head">
+                        <h3 class="npanel-head-title">Default</h3>
                     </div>
-                </div>
-
-            </div>
-            <div class="ncol-6">
-                <div class="ntitle-x">Inline block</div>
-                <button class="nbtn nbtn--danger nstate nstate--inline nstate--active">Check</button>
-                <div class="nstate-box">
-                    This is required.
+                    <div class="npanel-body">
+                        <div class="test-box">
+                            <button class="nbtn nbtn--primary nstate active">Dropmenu</button>
+                            <div class="nstate-box">
+                                <ul class="test-menu">
+                                    <li><a href="javascript:;">Form UI</a></li>
+                                    <li><a href="javascript:;">Table</a></li>
+                                    <li><a href="javascript:;">Layer</a></li>
+                                    <li><a href="javascript:;">Chart</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="test-box">
+                            <button class="nbtn nbtn--danger nstate active  hover">state hover</button>
+                            <div class="nstate-box">
+                                This is required.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
