@@ -1,9 +1,6 @@
 .nstate + .nstate-box{
     display: none;
 }
-.nstate.nstate--active + .nstate-box{
+.nstate.active + .nstate-box{
     display: block;
-}
-.nstate.nstate--inline.nstate--active + .nstate-box{
-    display: inline-block;
 }
