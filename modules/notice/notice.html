@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Notice</title>
+        <link rel="stylesheet" type="text/css" href="../../dist/css/jnose.min.css">
+        <link rel="stylesheet" type="text/css" href="../public/css/test.css">
+        <link rel="stylesheet" type="text/css" href="css/notice.css">
+
+        <script type="text/javascript" src="../../dist/scripts/base.all.js"></script>
+        <script type="text/javascript" src="../../dist/scripts/module.all.js"></script>
+        <script type="text/javascript" src="scripts/notice.js" ></script>
+        <style media="screen">
+            body{
+                max-width: 800px;
+            }
+            .ntab-pane {
+                padding: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="ntitle-xx">Notice</h1>
+        <div class="npanel">
+            <div class="npanel-body">
+                <div class="nrow">
+                    <div class="ncol-12">
+                        <button class="nbtn nbtn--primary" onclick="Notice.post('This is information #'+(new Date()).getTime()+'.','info')">Information</button>
+                        <button class="nbtn nbtn--warning" onclick="Notice.post('This is information #'+(new Date()).getTime()+'.','warning')">Warning</button>
+                        <button class="nbtn nbtn--success" onclick="Notice.post('This is information #'+(new Date()).getTime()+'.','success')">Success</button>
+                    </div>
+                    <div class="ncol-12">
+                        <ul class='nnotice'>
+                            <li class='nnotice-message'>
+                                <div class='nnotice-content'>Heads up! This alert needs your attention, but it's not super important.</div>
+                            </li>
+                            <li class='nnotice-message message--warning'>
+                                <div class='nnotice-content'>Warning! Better check yourself, you're not looking too good.</div>
+                            </li>
+                            <li class='nnotice-message message--success'>
+                                <div class='nnotice-content'>Well done! You successfully read this important alert message.</div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!--:end ntab navigation structure -->
+                </div>
+                <!-- end: row -->
+            </div>
+        </div>
+
+    </body>
+</html>
