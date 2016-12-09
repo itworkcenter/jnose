@@ -1,5 +1,5 @@
 /* *******************************
- * Notice.js v1.1.0
+ * Notice.js v1.0.0
  * Creator: Carl Liu
  * Date: 2016.8.16
  * Notice: This is a message tips tool.
