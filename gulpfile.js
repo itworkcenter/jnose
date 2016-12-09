@@ -22,7 +22,7 @@ var buildCss = buildPath + "css";
 var buildFont = buildPath + "fonts";
 
 // :start public define
-var publicPath = "modules/public/";
+var publicPath = "modules/_public_/";
 var fontPath = publicPath + "fonts/*.*";
 var publImg = publicPath + "/images/*.*";
 var publJs = [
