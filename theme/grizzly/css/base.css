@@ -177,3 +177,7 @@ body {
 .pager-side .nlist-item > a:hover{
 	color: white;
 }
+/*:start head logout*/
+.logout-list{
+    padding: 15px;
+}
