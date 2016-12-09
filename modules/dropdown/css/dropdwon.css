@@ -1,0 +1,30 @@
+.ndropdown{
+    position: relative;
+}
+.ndropdown-menu{
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 10rem;
+    color: #373a3c;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    box-shadow: 0 5px 12px 2px rgba(0,0,0,0.25);
+}
+.ndropdown-menu--xx{
+    min-width: 250px;
+}
+.ndropdown-menu--right{
+    left: auto;
+    right: 0;
+}
+.ndropdown.open > .ndropdown-menu{
+    display: block;
+}
